@@ -34460,3 +34460,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended 13:07Z–16:45Z (15Z block late, 18Z scheduled). Supervisor + 6 watchers up; Kimi pane live, not poisoned, still kimi.com monthly-quota blocked (last error 17:32Z). No Kimi turns in 24h.
 - Bankroll $85.35 (−$4.20 d/d; realizable PM $35.37 vs mid $42.79). Positions unchanged; no trades.
 - Lead (not traded): Anthropic IPO markets (price Nov 18, trade Nov 19). The closing-cap market resolves on shares outstanding (13.087B all classes; Class A only 7.428B) and the valuation market on fully diluted (~18.0B). Open question: which share count the listing page and resolvers use. Check the SpaceX June precedent before sizing. Details in partner_dialogue.
+
+## 2026-11-15T08:30Z — Investor partner session
+- Box suspended ~20:36Z Nov 14–07:25Z. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Bankroll $85.21; positions unchanged.
+- **Blocker:** Polymarket CLOB returns 403 geoblock. The box egress is now country PL (`/api/geoblock` blocked:true). No orders can be posted or cancelled from the box. Not circumventing; escalated to Philipp.
+- Research: SpaceX June/July closing-cap markets resolved on all share classes, so the Anthropic Class-A-only scenario is dead. Found a stale 100-share NO ask at 0.004 on "Anthropic closing cap above $1.0T" (fair ~0.05–0.07). Attempted taker BUY $1.15 @ ≤0.01 FAK, **rejected 403 (geoblock), nothing filled**. Prior added in portfolio_kelly_priors.json.

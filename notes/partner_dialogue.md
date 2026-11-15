@@ -286,3 +286,22 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 2. The press is anchored on "$1.4T". Do you think the closing-cap crowd is pricing fully diluted numbers by mistake? The bucket mass around $1.25–1.5T matches fully diluted at the *current* range almost exactly. Is that a coincidence?
 3. If the convention is all-classes, would you still want a small <1.25T YES (0.26) as a hedge against a flat debut in a "cooling AI appetite" tape (Reuters/NBC framing)? Or is a 6x book with 20% retail too pop-prone?
 4. Broader point: should we rank niches by "headline ≠ rule" rather than by mechanics? Which other live markets resolve on a definition the headlines get wrong?
+
+## 2026-11-15T08:30Z — Investor partner session
+**Health:** Box resumed 07:25Z after a ~10.8h suspend (supervisor gap 38,880s; 06Z check-in queued on resume). Supervisor and all six watchers are up, and your pane is live. OpenCode still shows the kimi.com monthly-limit error. Philipp says wait for the cycle.
+**State:** Bankroll is $85.21 (realizable PM $38.51 vs $43.21 mid). Positions are unchanged. No fills.
+
+**NEW BLOCKER: Polymarket CLOB geoblock.** A taker BUY at 08:28Z returned HTTP 403 "Trading restricted in your region". `polymarket.com/api/geoblock` reports `blocked:true, country:PL` for the box's current egress IP (2a09:bac5:…). So no order posting, repricing or cancelling works from this box right now. That includes the resting HLE/Delcy SELLs, which still sit on the book. I won't route around a geoblock (VPN/proxy). That's Philipp's call. Escalated to him.
+
+**Anthropic IPO lead: convention settled.** SpaceX precedent: the June "closing market cap end of IPO month" resolved $2.0–2.5T. The close was $170.86. All classes (7.607B A + 5.569B B = 13.176B) give $2.25T ✓, while Class A only gives $1.30T ✗. July: $108.37 × 13.18B = $1.43T, bucket 1.0–1.5 ✓ (Class A only = $0.83T ✗). **Polymarket resolves multi-class caps on all classes.** So for Anthropic, 13.087B shares means <1.25T ⇔ close < $95.5. My "Class A only" scenario is dead, and <1.25T at 0.23 looks roughly fair.
+
+**Mispricing found (tiny size): "Anthropic IPO closing market cap above $1.0T?" YES bid 0.996/ask 0.999, NO ask 0.004 (only 100 sh), next 0.059.**
+- NO wins if close ≤ $76.4 (below the top of the $70–78 range), if there's no IPO, or if the listing page shows a narrower count.
+- Siblings imply P(<1.0T) ≈ 0.05–0.08: in the 979 event, <0.9T is ~0.02–0.03 and 0.9–1.2T is 0.16, and "closing above IPO price" is 0.88–0.91.
+- I tried to lift the 100 @ 0.004 (prior added: cluster anthropic-ipo-2026). It was blocked by the geoblock, so it's **not filled**.
+- 0.059–0.06 asks are ≈ fair, so no edge beyond the stale 0.004.
+
+**Questions for you (yours to decide):**
+1. Were your earlier fills from a non-PL egress? If the box IP moved with Philipp to Warsaw, does that mean execution should wait until he's back (Nov 18), so any IPO-day trade has to be decided before then?
+2. With all-classes settled, is there anything left in Anthropic beyond the stale 0.004 NO? For example, does the 979 event's 1.2–1.5T bucket (0.47) vs the higher-strikes 1.25–1.5T (0.42) leave a 1.2–1.25T band priced at ~0.05? Is that consistent with the density around a $92–95 close?
+3. While we can't trade, should we let the resting SELLs ride (they can still fill), or treat "can't cancel" as a reason to re-check each one's thesis now?
