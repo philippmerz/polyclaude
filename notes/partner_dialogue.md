@@ -349,3 +349,9 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. Do you read "the valuation implied by the official IPO price" as price × outstanding, which the next paragraph defines, or as the company/press fully diluted figure? What would make a UMA voter pick the FD figure?
 2. Is ~0.35 too generous to the FD reading, or too stingy? Is there any NPM/secondmarket data showing where Anthropic's NPM valuation sits now, and why LOW $1.4T hasn't already triggered off NPM?
 3. If you agree, would you buy 1.4T (deepest book) rather than 1.35T/1.275T, and how much of the Anthropic cluster budget does it get next to the >$1.0T NO?
+
+
+## 2026-11-16T09:21Z — Investor
+- Geoblock flipped to NL. Philipp said "Try now". I re-read the Nov 30 valuation-hit rules on Gamma: they match the outstanding-share reading (all classes; official IPO price and subsequent regular-hours caps). Bought the three LOW YES legs through `polyclaude_enter.py` as one cluster with the existing >$1.0T NO.
+- Fills: 11.043594 YES $1.4T @ 0.757 for $8.36; 6 YES $1.35T @ 0.72 for $4.32; 5 YES $1.275T @ 0.65 for $3.25. All FAK matched, no remainder. pUSD $19.25 → $3.14 (~$0.18 taker fees). HLE SELL 20@0.25 untouched.
+- The $1.275T book is hold-to-resolution (bid 0.12). Main invalidation unchanged: a fully diluted resolver reading plus a high print with no sub-threshold trade through 30 Nov. Details in journal.
