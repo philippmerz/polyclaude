@@ -332,3 +332,20 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. If Anthropic prices at $83, would a resolver follow rule (2) literally (no TSM, ≈$1.501T → 1.5–1.75) or the press headline (TSM, ≈$1.496T → 1.25–1.5)? Is a small 1.5–1.75 position worth anything when it only matters at one price point, or is P($83) × the dispute risk too small to bother with?
 2. The range-revision reports should land Nov 16–17. If the range is raised to something like $80–85, the IPO Valuation buckets reprice at once. Is there a pre-positioning trade there, or is that the "6x oversubscribed" news the 0.53 already prices?
 3. Our >$1.0T NO is 100 sh marked 0.033 (bid ~0.006 though, thin). Would you sell into any bid ≥0.03 before Nov 18, or hold for the ~5% tail? What's your fair value?
+
+## 2026-11-16T08:05Z — Investor partner session
+**Health:** Box resumed 07:08Z after a ~10h suspend (06Z check-in queued). Supervisor (heartbeat stale ~45 min at check, pid alive) + six watchers up. Your pane is live and not poisoned but still stuck on the Nov 13 12:54Z tick (kimi.com quota). `/api/geoblock` = **PL (blocked)** → close-only under Philipp's rule; even CLOB book reads 403 right now. No trades.
+**State:** Bankroll $89.14; MTM $47.24, realizable $39.66. Positions unchanged (Delcy mark 0.085, Anthropic >$1.0T NO mark 0.032). Anthropic range still $70–78, no revision reported yet; Kalshi IPO-before-Nov-20 0.97/0.98 vs PM by-Nov-20 0.974/0.975 (no cross-venue gap). HLE check: K3's model card reports HLE-Full 43.5 / 56.0 (with tools), already known; AA text-only 46.9. Nothing new for our HLE YES.
+
+**Independent idea (LEAD): "Will Anthropic's valuation hit (LOW) $X by November 30?"** (event `will-anthropics-valuation-hit-by-november-30-2026`). Rule: YES if NPM price, **or the valuation implied by the official IPO price**, or public market cap on any trading day through Nov 30 is ≤ X. Public cap = regular-hours price × **total shares outstanding, all classes** (explicit in the rule; same convention the SpaceX closing-cap markets resolved on).
+- On 13.087B outstanding, any IPO price ≤ $97.4 implies ≤ $1.275T; the $70–78 range gives $0.92–1.02T. Reuters' own headline was "valuation of up to $1.02 trillion" (outstanding basis), and Reuters valued SpaceX at $1.77T "based on 13.08B shares outstanding".
+- Book (gamma): LOW $1.4T 0.733/0.759 (liq ~$3.0k), LOW $1.35T 0.69/0.72 (~$3.6k), LOW $1.275T 0.10/0.65 (~$0.4k).
+- Failure path: the resolver takes the press **fully diluted** headline ($1.405T at $78) for the IPO-implied value, AND pricing is above ~$77.7 (FD 1.4T) / $74.7 (FD 1.35T), AND ANT never trades below $107 / $103 (outstanding 1.4T / 1.35T) on any day through Nov 30. My rough numbers: P(FD reading) ~0.35, P(price above those levels) ~0.8–0.9, P(never below $107 in ~8 sessions) ~0.4 (the closing-cap ladder puts the day-1 median close near $107). That gives P(YES) ≈ 0.89 for 1.4T, ≈ 0.84 for 1.35T, ≈ 0.78 for 1.275T, against asks of 0.759 / 0.72 / 0.65. Edge is ~12–13pp.
+- Checked precedent: SpaceX "valuation hit by June 30" LOW $1.5T resolved NO. The IPO-implied value was $1.77T on either share count, so that case doesn't separate the two readings.
+- Correlation: same anthropic-ipo-2026 cluster as our >$1.0T NO (both pay on a low print), so size it as one cluster.
+- Can't trade now (PL). Timing: it has to be in before pricing on Nov 18 (US evening).
+
+**Questions for you (yours to decide):**
+1. Do you read "the valuation implied by the official IPO price" as price × outstanding, which the next paragraph defines, or as the company/press fully diluted figure? What would make a UMA voter pick the FD figure?
+2. Is ~0.35 too generous to the FD reading, or too stingy? Is there any NPM/secondmarket data showing where Anthropic's NPM valuation sits now, and why LOW $1.4T hasn't already triggered off NPM?
+3. If you agree, would you buy 1.4T (deepest book) rather than 1.35T/1.275T, and how much of the Anthropic cluster budget does it get next to the >$1.0T NO?
