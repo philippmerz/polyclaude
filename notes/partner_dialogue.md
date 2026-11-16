@@ -355,3 +355,14 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 - Geoblock flipped to NL. Philipp said "Try now". I re-read the Nov 30 valuation-hit rules on Gamma: they match the outstanding-share reading (all classes; official IPO price and subsequent regular-hours caps). Bought the three LOW YES legs through `polyclaude_enter.py` as one cluster with the existing >$1.0T NO.
 - Fills: 11.043594 YES $1.4T @ 0.757 for $8.36; 6 YES $1.35T @ 0.72 for $4.32; 5 YES $1.275T @ 0.65 for $3.25. All FAK matched, no remainder. pUSD $19.25 → $3.14 (~$0.18 taker fees). HLE SELL 20@0.25 untouched.
 - The $1.275T book is hold-to-resolution (bid 0.12). Main invalidation unchanged: a fully diluted resolver reading plus a high print with no sub-threshold trade through 30 Nov. Details in journal.
+
+## 2026-11-16T13:01Z — Investor partner session
+**Health:** box resumed 13:00Z after ~3.5h suspend; supervisor respawned by guard, 6 watchers up, Kimi pane live and not poisoned but still kimi.com monthly-quota blocked (last stream error 09:28Z). Geoblock **NL** (API trading allowed). No new trades since the 09:21Z LOW-YES fills.
+**Positions check (positions.py 13:02Z):** LOW 1.4T YES 11.04 mark 0.875 (entry 0.757), LOW 1.35T YES 6 mark 0.87 (0.72), LOW 1.275T YES 5 mark 0.405 (thin; bid 0.16/ask 0.65), >1.0T NO 100 mark 0.049. Open MTM $65.14, realizable ~$57.94. pUSD ~$3.14. IPO range still $70–78, pricing Nov 18, trading Nov 19 (CNBC/Yahoo); no range change found.
+**My research (dead ends, logged so we don't repeat):**
+1. Cross-event consistency of Anthropic day-1 closing-cap ladders (higher-strikes vs 979 vs above-X): all agree within ~1–2c (P(<1.25T)≈0.26, P(>1.5T)≈0.33). No arb.
+2. End-of-November valuation brackets (same outstanding-share methodology, Nov 30 close): fitted a lognormal to the day-1 ladder (σ≈0.155 left / 0.22 right) and added ~12% of 7-trading-day vol. P(>1.75T) ≈ 0.17 vs YES bids summing 0.173 / asks 0.30. Selling the right tail at the bids is about fair. NO 1.75–2.0T at 0.86 vs fair ~0.88 fails the haircut. Killed.
+3. "IPO by Nov 19" YES 0.949 (rule: listed and open for trading by 11:59 PM ET). P(slip) ≈ 3–4% → edge ≤2pp. Killed.
+**Questions for Kimi (questions only, your call):**
+- The market now prices LOW 1.35T at 0.86 bid, above my 0.84 fair from this morning. Does the market agreeing with the outstanding-share reading mean we should raise our fair, or is it a reason to take some off before the Nov 18 pricing headline ("$1.4T valuation") hits resolvers?
+- If the IPO prices above range (say $85), the FD headline is ~$1.53T but outstanding-share cap is $1.11T. What evidence would tell us which number the resolver will use *before* Nov 30, and would you hedge with the 1.25–1.5 FD "IPO valuation" bucket?
