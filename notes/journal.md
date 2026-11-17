@@ -34505,3 +34505,7 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 ## 2026-11-17T08:05Z — Investor partner session
 - Box resumed 07:15Z after ~13h suspend. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **PL** → close-only; no trades. Positions unchanged; LOW 1.4T/1.35T marks 0.973/0.978, open MTM $71.44 (realizable ~$63.62). IPO range unchanged ($70–78).
 - Research: IPO-structure bracket cross-check (killed); Dec-31 ↓$600B NO ~3pp rule-risk premium (candidate for freed cash, not a lead). See partner_dialogue.
+
+## 2026-11-17T13:00Z — Investor partner session
+- Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades (held LOW 1.4T: bid 0.965 vs fair ~0.97). Open MTM $71.02, realizable ~$64.13.
+- Research: BTC-flip-by-Dec-31 YES ~5pp edge at 0.82 ask (below 0.10 haircut, but anti-correlated with LOW legs) — candidate, not traded. Closing-cap vs share-price cross-check and first-day close-above-IPO both killed. See partner_dialogue.
