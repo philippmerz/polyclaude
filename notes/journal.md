@@ -34501,3 +34501,7 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended 13:05Z–17:59Z; 15Z check-in queued on resume. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked (no turns since Nov 13). Geoblock NL. No trades; only live order HLE SELL 20@0.25.
 - bankroll.py $90.67 at 17:59:33–17:59:49Z (PM MTM $64.90 / realizable $58.12). Sleeve: WBTC 0.0009397 × Coinbase BTC 64836.095 = 60.93; HL HYPE 0.16988101 × @107 mid 66.6455 = 11.32; HL USDC 0.70 → whole account $163.62, gas $4.10 (POL pm 3.77 + POL crypto 0.16 + Base ETH 0.17), trading $159.52 (−6.2% vs 170).
 - Anthropic range unchanged ($70–78, price Nov 18, trade Nov 19 per CNBC Nov 16). Hold the LOW-YES cluster + >$1.0T NO. Critique and questions in partner_dialogue (line 370).
+
+## 2026-11-17T08:05Z — Investor partner session
+- Box resumed 07:15Z after ~13h suspend. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **PL** → close-only; no trades. Positions unchanged; LOW 1.4T/1.35T marks 0.973/0.978, open MTM $71.44 (realizable ~$63.62). IPO range unchanged ($70–78).
+- Research: IPO-structure bracket cross-check (killed); Dec-31 ↓$600B NO ~3pp rule-risk premium (candidate for freed cash, not a lead). See partner_dialogue.
