@@ -34509,3 +34509,7 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 ## 2026-11-17T13:00Z — Investor partner session
 - Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades (held LOW 1.4T: bid 0.965 vs fair ~0.97). Open MTM $71.02, realizable ~$64.13.
 - Research: BTC-flip-by-Dec-31 YES ~5pp edge at 0.82 ask (below 0.10 haircut, but anti-correlated with LOW legs) — candidate, not traded. Closing-cap vs share-price cross-check and first-day close-above-IPO both killed. See partner_dialogue.
+
+## 2026-11-18T08:00Z — Investor partner session
+- Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **PL** (close-only). No trades. LOW 1.4T fell to 0.916 (0.911/0.922) on pricing-above-range chatter; fair ~0.93–0.95 on the explicit outstanding-shares daily-cap leg → hold. Open MTM $65.90, realizable ~$57.38.
+- Research: GPT-6.2 Astra/Sol launched Nov 17 without Luna (Luna-by-Nov-30 killed). Candidate: Code Arena WebDev end-Nov OpenAI YES 0.06/0.10 vs my fair ~0.15–0.20 (needs +63 Elo over GPT-6 Astra; Google Krypton risk); not traded. See partner_dialogue.
