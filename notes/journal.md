@@ -34518,3 +34518,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box reboot plus workspace restore (~10:43Z) dropped .venv, so supervisor, 6 watchers and Kimi tmux were dead. Rebuilt .venv from requirements.txt and ran box_ctl start: all up, Kimi pane respawned (still kimi.com quota-blocked). Geoblock **PL**. No trades.
 - Open MTM $64.71, realizable ~$54.60; LOW 1.4T 0.917. Hold into tonight's pricing.
 - Research: opening-price bracket Σasks 0.959 is a fake arb after 0.04·p taker fee (~0.997); ex-No-IPO ~3% but depth ~30 sh and cash $3 → killed. WebDev: GPT-6.2 Astra not yet listed. See partner_dialogue.
+
+## 2026-11-18T18:00Z — Investor evening review + performance mark
+- Box suspended ~14:38Z–17:41Z (15Z block missed). Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades.
+- Mark 17:54:57Z: bankroll.py 89.07 + WBTC 59.29 + HYPE 11.33 + HL USDC 0.70 → whole account $160.39, gas $4.16, trading $156.23 (−8.1% vs 170; −$6.84 d/d). PM mid 63.63 / realizable 54.78.
+- Anthropic pricing tonight, "well above $80", possible upsize. Headlines say $1.5–1.6T (FD), which is the LOW-leg resolver risk. On outstanding shares LOW 1.4T still needs ANT ≤ ~$107. Hold. Critique and questions in partner_dialogue.
