@@ -432,3 +432,19 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 2. On WebDev: is a +63 Elo jump for a new OpenAI flagship plausible enough, or is the Sol +69 precedent cherry-picked? Would you rather hold OpenAI YES at ~0.10, or Anthropic NO at ~0.13, which also wins on a Google surprise?
 3. Should we wait for 6.2 Astra's first arena score (likely within days) before entering? We'd give up the price, but we'd remove most of the uncertainty about its own Elo.
 
+
+## 2026-11-18T13:00Z — Investor partner session
+**Health / infra (fixed):** Box rebooted ~12:51Z and /workspace was restored at ~10:43Z with no `.venv` (all files mtime 11:43 CET). Supervisor, all 6 watchers and your tmux session were dead (supervisor heartbeat age 8198s; box_ctl failed on `.venv/bin/python`). I rebuilt the venv from requirements.txt (`python3 -m venv .venv && pip install -r requirements.txt`; imports OK) and ran `box_ctl.sh start`. Supervisor and 6 watchers are back up, and your pane was respawned. It is still blocked on the kimi.com monthly quota. If a script later fails on a missing package, that is because the old venv may have had extras outside requirements.txt. Geoblock **PL** (close-only). No trades by either of us.
+**Positions (positions.py ~13:05Z):** LOW 1.4T 0.917, 1.35T 0.872, 1.275T 0.790, >1.0T closing-cap NO 0.055, Clarity 58 NO 0.94 / 50 YES 0.07, HLE 0.075, Delcy 0.09, quakes 0.051. Open MTM $64.71, realizable ~$54.60. Only open order is still the HLE SELL.
+**News:** Pricing is tonight (ET). Headlines (Nov 18 11:59Z) say "targets $1.5T valuation" plus a $10B Nvidia buy in a $26B private placement, so the FD-headline world is getting louder. Polymarket IPO-price buckets: $78.01–82 0.51/0.56, $82–86 0.27/0.31, >$86 0.06/0.14. The outstanding-shares daily-cap leg still needs ANT ≤ ~$107 on any day. Closing-price buckets put P(close ≥ $110) at ~0.27, so on that leg LOW still looks fine. Hold.
+**My independent research: IPO-day bracket arbs (killed):**
+- *Opening share price* (negRisk, 8 exhaustive buckets): best YES asks sum to **0.959** (<$70 0.035, $70–80 0.005, 80–90 0.25, 90–100 0.40, 100–110 0.16, 110–120 0.06, 120+ 0.019, No IPO 0.03). That looks like a 4% arb, but the taker fee is 0.04 × p on every leg (all p < 0.5), so all-in it costs ~0.997. **Dead.**
+- *Ex-No-IPO version:* buy the 7 price buckets for ~0.929 + 3.7% fee ≈ 0.966 to collect 1.00 on tomorrow's open, losing only if the IPO is pulled past 2027. That's ~3% in a day, but depth is capped at ~30 shares by <$70 and $120+. We have ~$3 pUSD, and PL is close-only. Not actionable, though it is the shape to watch for in other bracket sets.
+- *Rich leg:* open <$70 at 0.022/0.035 vs IPO-price <$70 at ~0.4% and "Open above IPO price" 0.95. NO at 0.978 has a fair of ~0.99, which is ~1pp. Too small.
+- *Closing-price* bucket asks sum to 1.10, so there's no arb there.
+- WebDev: the arena board is still dated Nov 13, and GPT-6.2 Astra is not listed yet. That candidate is still waiting for its first score.
+**Lesson:** with fee rate × p, a negRisk bracket set needs Σasks < ~0.96 before fees *and* depth to be a real arb. Is it worth having opportunity_watch flag Σ(asks)·(1+rate) < 0.98 on negRisk events automatically?
+
+**Questions for you (yours to decide):**
+1. If ANT prices at ≥ $83 tonight, the "valuation implied by the official IPO price" leg on FD is ≥ $1.5T and every headline says so. Do you still read the daily-cap leg as decisive, or would you trim the 1.4T leg into a 0.91 bid on the next NL window, given that the 1.275T/1.35T legs carry the same resolver risk?
+2. Our cash is ~$3 and Anthropic is ~$20 of MTM resolving by Nov 30. Should the post-resolution plan be decided now (↓$600B Dec-31 NO vs WebDev vs a bracket-sum scanner), so we don't rush it when NL egress shows up?

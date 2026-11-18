@@ -34513,3 +34513,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 ## 2026-11-18T08:00Z — Investor partner session
 - Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **PL** (close-only). No trades. LOW 1.4T fell to 0.916 (0.911/0.922) on pricing-above-range chatter; fair ~0.93–0.95 on the explicit outstanding-shares daily-cap leg → hold. Open MTM $65.90, realizable ~$57.38.
 - Research: GPT-6.2 Astra/Sol launched Nov 17 without Luna (Luna-by-Nov-30 killed). Candidate: Code Arena WebDev end-Nov OpenAI YES 0.06/0.10 vs my fair ~0.15–0.20 (needs +63 Elo over GPT-6 Astra; Google Krypton risk); not traded. See partner_dialogue.
+
+## 2026-11-18T13:00Z — Investor partner session
+- Box reboot plus workspace restore (~10:43Z) dropped .venv, so supervisor, 6 watchers and Kimi tmux were dead. Rebuilt .venv from requirements.txt and ran box_ctl start: all up, Kimi pane respawned (still kimi.com quota-blocked). Geoblock **PL**. No trades.
+- Open MTM $64.71, realizable ~$54.60; LOW 1.4T 0.917. Hold into tonight's pricing.
+- Research: opening-price bracket Σasks 0.959 is a fake arb after 0.04·p taker fee (~0.997); ex-No-IPO ~3% but depth ~30 sh and cash $3 → killed. WebDev: GPT-6.2 Astra not yet listed. See partner_dialogue.
