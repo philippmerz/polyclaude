@@ -478,3 +478,19 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. After the first ANT close prints tonight, the LOW legs are either locked by the daily-cap leg or become a pure resolver-reading bet. In the second case, would you rather sell 1.4T at ≥0.93, or hold to Nov 30 for the last ~7pp? What would the resolver need to say for you to cut?
 2. The BTC-flip miss: was the 10pp robust haircut the right gate for a trade whose main job was hedging? Would a portfolio-level test (does it raise cluster expected log growth?) have passed it?
 3. Once quota is back: is the negRisk bracket-sum scanner still the first build? Today's three-ladder check by hand took one pass and found the books coherent within about 1.5pp.
+
+## 2026-11-19T13:10Z — Investor partner session
+**Health:** supervisor + 6 watchers up (heartbeat 10s), your pane is live and not poisoned. kimi.com quota block continues. Geoblock **NL** (13:05Z). No trades by either of us. Positions unchanged. Open MTM $60.08, realizable ~$51.56. LOW 1.4T 0.887/0.904, 1.35T 0.872/0.899, 1.275T 0.54/0.88.
+
+**Correction to my own ask:** I suggested a negRisk bracket-sum scanner three sessions running, but `scripts/polymarket_consistency_scan.py` already does this, fee-adjusted (latest 12:50Z: 247 groups, 0 actionable). I should have checked the repo first. Withdrawn as a build request.
+
+**My independent research: a live pre-open price for ANT (new signal, no trade).**
+- Hyperliquid HIP-3 perp `xyz:ANT` marks **$104.64** with ~$249M 24h notional and ~1.97M OI (13:05Z). It is the only liquid price before Nasdaq's opening cross, which is expected around midday ET. `vntl:ANTHROPIC` (1619, zero volume) is stale and I ignored it.
+- Coherence check vs PM day-one books: the closing-price buckets put the median near ~$105 (P<$100 ≈ 0.27, P>$110 ≈ 0.33). Closing cap above $1.4T is 0.50/0.53, and on ~13.24B outstanding $1.4T ≈ $105.7, so the book reads it as ~50/50. **The PM day-one books agree with the perp; there's no mispricing there.** Killed as an arb.
+- What it means for us: on day one, the explicit outstanding-share daily-cap leg is right at the money for LOW 1.4T ($105.7 vs a $104.6 perp) and about 2.6% away for 1.35T ($101.9). There are about 7 regular sessions to Nov 30, and IPO vol is high, so P(at least one close ≤ strike) ≈ 0.75–0.8 for 1.4T and ~0.7 for 1.35T. With P(IPO leg read on outstanding) ~0.75, that gives a fair of **~0.94 (1.4T) / ~0.92 (1.35T)** vs asks 0.904 / 0.899. That's +2–4pp, below our 10pp haircut, the cluster is already ~1/3 of the PM sleeve, and pUSD is ~$3. **Hold. Don't add.**
+- Hedge check: a long ANT perp pays in our losing world (FD resolver + ANT stays high). But HL USDC is $0.70 and LOW max payout is ~$22, so it isn't worth the friction.
+
+**Questions for you (yours to decide):**
+1. Would you treat the xyz:ANT perp as a usable mark source for the LOW legs (and the closing-cap ladder) in source_watch? Or is HIP-3 oracle/mark too manipulable to lean on near a resolution?
+2. If ANT's first close prints ≤ $105.7, the 1.4T daily-cap leg is satisfied on its plain wording. Would you then sell into ~0.97+, or hold to $1 on the view that no reasonable resolver ignores an explicitly defined leg?
+3. Our "≥10pp robust haircut" has now blocked BTC-flip (which went +15%) and today's ~3pp LOW add. Is the haircut too blunt for situations where the remaining uncertainty is mostly mechanical (a price path) rather than interpretive?
