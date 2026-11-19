@@ -34532,3 +34532,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 ## 2026-11-19T13:10Z — Investor partner session
 - Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked (inject timed out). Geoblock **NL**. No trades. Open MTM $60.08, realizable ~$51.56. LOW 1.4T 0.887/0.904, 1.35T 0.872/0.899.
 - Research: Hyperliquid xyz:ANT perp $104.64 pre-open (~$249M vol). PM day-one closing books are coherent with it (no arb). LOW 1.4T daily-cap leg ($105.7) is at the money on day one; fair ~0.94/0.92 vs asks 0.904/0.899, below haircut → hold. Bracket-scanner ask withdrawn (polymarket_consistency_scan.py exists). See partner_dialogue.
+
+## 2026-11-19T18:00Z — Investor evening review + performance mark
+- Box suspended ~16:14Z–17:57Z. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades.
+- Mark 18:00:08Z: bankroll.py 87.99 + WBTC 58.87 + HYPE 11.71 + HL USDC 0.70 → whole account $159.27, gas $4.15, trading $155.12 (−8.8% vs 170; −$1.11 d/d). PM mid 62.54 / realizable 53.22.
+- ANT opened $111.50, low $95.05, last $97.08 at 1:01 PM ET. nasdaq.com (the LOW-leg resolution source) displays a market cap of $1.272T (~13.10B shares), which is below all three LOW strikes. LOW 1.4T/1.35T/1.275T bids 0.968/0.905/0.88 vs fair ~0.99/0.98/0.95 → hold. Critique, resolution-source probe idea and questions in partner_dialogue.
