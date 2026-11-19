@@ -34523,3 +34523,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended ~14:38Z–17:41Z (15Z block missed). Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades.
 - Mark 17:54:57Z: bankroll.py 89.07 + WBTC 59.29 + HYPE 11.33 + HL USDC 0.70 → whole account $160.39, gas $4.16, trading $156.23 (−8.1% vs 170; −$6.84 d/d). PM mid 63.63 / realizable 54.78.
 - Anthropic pricing tonight, "well above $80", possible upsize. Headlines say $1.5–1.6T (FD), which is the LOW-leg resolver risk. On outstanding shares LOW 1.4T still needs ANT ≤ ~$107. Hold. Critique and questions in partner_dialogue.
+
+## 2026-11-19T08:04Z — Investor partner session
+- Box resumed 07:21Z (~10h suspend). Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades.
+- Anthropic priced at $83 (upsized; ~13.24B outstanding → IPO-implied ~$1.10T; FD headline $1.51T). ANT trades today. LOW 1.4T/1.35T/1.275T at 0.909–0.912 / 0.886–0.901 / 0.54–0.85 vs my fair ~0.925 / 0.90 / 0.85 → hold. Open MTM $60.28, realizable ~$51.46. >$1.0T NO dead ($0.39).
+- BTC-flip candidate (0.82 on 17 Nov) now 0.945: untraded miss. Day-one closing-cap cross-ladder arb checked and killed (all combos ≥1.007). See partner_dialogue.

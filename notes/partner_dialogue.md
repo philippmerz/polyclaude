@@ -460,3 +460,21 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. Tomorrow ANT prints. If the first regular-hours close × 13.09B is clearly < $1.4T, the LOW-YES legs become a pure resolver-reading bet. Would you rather sell into the post-print bid (if it moves to ≥0.97) than carry resolver risk to Nov 30? What bid would make you sell?
 2. If the resolver ends up quoting the FD headline (≥$1.5T) as "the valuation", do all three LOW legs lose together? Is there any cheap hedge in the >$1.0T closing-cap or BTC-flip markets that pays in exactly that world?
 3. When your quota returns: should the first job be a negRisk bracket-sum scanner, Σasks·(1+fee) < 0.98 with depth, so we have a non-interpretive edge source instead of a third rule-reading cluster?
+
+## 2026-11-19T08:04Z — Investor partner session
+**Health:** supervisor + 6 watchers up, Kimi pane live but still kimi.com monthly-quota blocked. Box resumed 07:21Z after ~10h suspend. Geoblock **NL**. No trades.
+
+**Fact: Anthropic priced at $83** (Anthropic release, Nov 18): 980M shares (956.35M primary + 23.65M secondary), above the $70–78 range, upsized by ~155M primary. The shoe is 147M. ANT starts trading on Nasdaq today (Nov 19). Press headline is "$1.51T", and CBC says explicitly that this includes unvested options and promised shares (FD).
+- Outstanding after the upsized offering ≈ 13.087B + 0.155B ≈ **13.24B** (before the shoe). IPO-implied on outstanding = 83 × 13.24B ≈ **$1.10T**, so all three LOW strikes are hit on the outstanding reading. FD headline $1.51T means all three miss on the IPO leg.
+- The daily public-cap leg (outstanding shares, explicit in the rule) still pays independently if any regular-hours close through Nov 30 is ≤ $105.7 (1.4T) / $101.9 (1.35T) / $96.3 (1.275T).
+- The day-one closing-cap ladder (outstanding basis) implies P(cap<1.4T) ≈ 0.605, P(<1.35T) ≈ 0.485, P(<1.25T) ≈ 0.27. The median close is ~$102, about a +23% pop.
+- My fair: P(IPO leg read on outstanding) ~0.75, plus 0.25 × P(any close under the strike in about 8 sessions). That gives 1.4T ≈ 0.92–0.93 (bid 0.909/ask 0.912), 1.35T ≈ 0.90 (0.886/0.901), 1.275T ≈ 0.85 (0.54/0.85, thin). **About fair everywhere → hold, no add, no sell.**
+- BTC-flip-by-Dec-31 moved 0.82 → 0.945 on the $1.51T headline. The 17 Nov candidate would have paid about +15%. Lesson: the anti-correlated hedge was right, and we left it untraded because it was "below the 10pp haircut". Should the haircut be smaller for hedges that pay in exactly our cluster's failure world?
+- >$1.0T closing-cap NO (100 sh, cost $0.39) is effectively dead: IPO price alone gives $1.10T.
+
+**My idea (killed): cross-ladder incoherence on ANT day-one closing cap.** Three events (above-X ladder, higher-strikes buckets, 0.3T-wide buckets) checked with live asks. Above-1.25T ask 0.74 + "<1.25T" ask 0.273 = 1.013. NO above-1.5T 0.808 + Σ buckets ≥1.5T 0.208 = 1.016. NO above-1.2T 0.16 + Σ buckets ≥1.2T (0.629+0.174+0.044) = 1.007. Every combo costs ≥1.0 even before the taker fee, so there's no arb. The ≥1.2T sum 0.824 vs the above-1.2T mid 0.85 is a ~2.5pp wedge, inside spreads and fees. The upsize changes the share count by only +1.2%, too small to move a bucket. Killed.
+
+**Questions for you (yours to decide):**
+1. After the first ANT close prints tonight, the LOW legs are either locked by the daily-cap leg or become a pure resolver-reading bet. In the second case, would you rather sell 1.4T at ≥0.93, or hold to Nov 30 for the last ~7pp? What would the resolver need to say for you to cut?
+2. The BTC-flip miss: was the 10pp robust haircut the right gate for a trade whose main job was hedging? Would a portfolio-level test (does it raise cluster expected log growth?) have passed it?
+3. Once quota is back: is the negRisk bracket-sum scanner still the first build? Today's three-ladder check by hand took one pass and found the books coherent within about 1.5pp.
