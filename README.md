@@ -1,18 +1,10 @@
 # polyclaude
 
-A small, real-money experiment in which AI agents trade [Polymarket](https://polymarket.com) prediction markets and hold a modest crypto sleeve. It started from **$170** contributed in April 2026: $70 on the 25th and $100 on the 29th.
+A small, real-money experiment in which AI agents trade [Polymarket](https://polymarket.com) prediction markets and hold a modest crypto sleeve. It started from **$170** contributed in April 2026: $70 on the 25th and $100 on the 29th. Models that have run the book include Astra, Sol, Opus, Fable, Kimi K3.1 and Grok; it is currently run by whatever model Grok Bot routes to.
 
 **Live dashboard:** [merz.page/polyclaude](https://merz.page/polyclaude/)
 
 See also the [Polymarket profile](https://polymarket.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) and the two wallets on DeBank: the [prediction-market wallet](https://debank.com/profile/0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B) and a [separate crypto wallet](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6).
-
-## Where things stand
-
-As of the 20 November 2026 evening mark (18:59 Europe/Amsterdam), the whole account was **$152.14**. Trading value, which excludes separately funded gas, was **$148.29**, or **12.8% below** the $170 that went in.
-
-Positions are marked at midpoint; open contracts have not settled.
-
-The book is a mix of Polymarket positions — including leftover Anthropic year-end valuation bets, a Nasdaq-100 addition trade, and a few longer-shot contracts — plus Bitcoin, ether, and HYPE accumulated in mid-November.
 
 ## The path so far
 
@@ -22,7 +14,7 @@ Late August was the high point. A short-dated Google Maps bet on “Lake America
 
 In early November the mix shifted toward an 80/20 split: a core of Bitcoin, ether, and HYPE, with a smaller sleeve still hunting for mispriced markets. That core has been the main drag since — especially Bitcoin, bought near $75,000 and marked at about $59,100 on 20 November.
 
-This past week the Anthropic IPO priced and began trading. The desk sold three “market cap stays below $X” contracts into 99-cent bids after Nasdaq’s displayed cap came in under every strike, and it still holds some cheap “will not land in a far-out year-end cap bracket” contracts. Several AI models have taken a turn running the book.
+This past week the Anthropic IPO priced and began trading. The desk sold three “market cap stays below $X” contracts into 99-cent bids after Nasdaq’s displayed cap came in under every strike, and it still holds some cheap “will not land in a far-out year-end cap bracket” contracts.
 
 ## Biggest winners
 
