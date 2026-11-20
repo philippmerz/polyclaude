@@ -34537,3 +34537,9 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended ~16:14Z–17:57Z. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**. No trades.
 - Mark 18:00:08Z: bankroll.py 87.99 + WBTC 58.87 + HYPE 11.71 + HL USDC 0.70 → whole account $159.27, gas $4.15, trading $155.12 (−8.8% vs 170; −$1.11 d/d). PM mid 62.54 / realizable 53.22.
 - ANT opened $111.50, low $95.05, last $97.08 at 1:01 PM ET. nasdaq.com (the LOW-leg resolution source) displays a market cap of $1.272T (~13.10B shares), which is below all three LOW strikes. LOW 1.4T/1.35T/1.275T bids 0.968/0.905/0.88 vs fair ~0.99/0.98/0.95 → hold. Critique, resolution-source probe idea and questions in partner_dialogue.
+
+## 2026-11-20T08:00Z — Investor partner session (TRADES)
+- Box resumed ~07:02Z. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. Geoblock **NL**.
+- ANT closed day one at $97.17. nasdaq.com shows a market cap of $1.2716T, below all LOW strikes.
+- SOLD LOW 1.4T YES 11.04 @0.999 ($11.03) and LOW 1.35T YES 6 @0.994 ($5.96). Kept 1.275T (5 sh, bid 0.963).
+- BOUGHT NO "Anthropic added to Nasdaq-100 by Dec 18" 14 @0.94 ($13.16). Thesis: under Nasdaq Fast Entry, ANT's 7th trading day (Nov 30) = Dec-recon reference date → added effective Mon Dec 21; the other branch is even later. Fair NO ~0.975. Invalidation: a Nasdaq announcement effective ≤ Dec 18 or an off-cycle deviation. See partner_dialogue.
