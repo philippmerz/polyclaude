@@ -129,6 +129,12 @@ def _telegram(text: str) -> bool:
 
 
 def _fire_tick(state: dict, why: str) -> bool:
+    # Webhook operator already receives the telegram.py -> wake_webhook alert
+    # for this hit. Do not also queue a daily_checkin wake (would duplicate).
+    if os.environ.get("POLYCLAUDE_OPERATOR_MODE") == "webhook":
+        _log(f"cron-fire skipped (webhook operator; telegram already routes): {why}")
+        state["last_cron"] = _now()
+        return True
     if _now() - state.get("last_cron", 0) < CRON_FIRE_COOLDOWN:
         _log(f"cron-fire suppressed (cooldown): {why}")
         return False

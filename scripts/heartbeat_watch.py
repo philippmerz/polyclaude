@@ -5,12 +5,16 @@ operator on Telegram if anything looks stuck. Catches the class of bug that
 left a headless model worker deadlocked for three days.
 
 Checks performed:
-  1. news_watcher daemon: PID alive AND state file (POLYCLAUDE_NEWS_STATE)
-     mtime < 30 min old (state file updates after every 5-min poll cycle).
-  2. telegram_listener daemon: PID alive (no good activity signal during
-     quiet operator periods, so PID-only).
+  1. news_watcher daemon: PID alive (or a live process found by argv).
+     State-file and log mtimes are not used: both go stale across box
+     suspends, and the log is silent on quiet poll cycles.
+  2. telegram_listener, opportunity_watch, and the box supervisor (via
+     _supervisor_guard): process liveness, plus the existing persistence
+     and resource checks.
   3. Stuck headless model workers: any such process running > 60 min is
      anomalous (cron ticks should complete much faster).
+  Kimi-session checks (tick eaten, journal stale, session likely dead,
+  kimi tmux absent) are skipped when POLYCLAUDE_OPERATOR_MODE=webhook.
 
 Each anomaly type has an independent Telegram cooldown. Routine disk warnings
 repeat daily; critical disk alerts retain their hourly cooldown.
@@ -174,19 +178,9 @@ def check_news_watcher(state: dict) -> None:
                   cooldown=DAEMON_DOWN_COOLDOWN)
             return
 
-    try:
-        state_path = _secrets.path("POLYCLAUDE_NEWS_STATE")
-    except RuntimeError:
-        return
-    if not state_path.exists():
-        _emit(state, "news_watcher_no_state",
-              "news_watcher state file missing despite live PID")
-        return
-    age = _now() - int(state_path.stat().st_mtime)
-    if age > NEWS_STATE_STALE_SECONDS:
-        _emit(state, "news_watcher_stale",
-              f"news_watcher state file unchanged for {age // 60} min "
-              f"(threshold {NEWS_STATE_STALE_SECONDS // 60}); poll loop may be stuck")
+    # Liveness is the process itself. Do not alert on news state-file or log
+    # mtime: a box suspend makes every mtime look stale, and news_watcher.log
+    # is not written on quiet cycles. Persistence integrity below still runs.
 
     # Output-integrity invariant (2026-06-11 lesson: liveness != output integrity —
     # 30h of alerts were LOGGED but never PERSISTED to news_alerts.jsonl and every
@@ -326,8 +320,8 @@ def check_session_liveness(state: dict) -> None:
     Telegram (LLM-independent path) so an outage is a ping within hours,
     not a silence discovered days later.
     """
-    if _webhook_mode() and not _webhook_configured():
-        return  # wakes are only logged to logs/wake_outbox.jsonl until the webhook is set
+    if _webhook_mode():
+        return  # Kimi/session-output check retired; Investor is the webhook operator
     repo = Path(__file__).resolve().parent.parent
     journal = repo / "notes" / "journal.md"
     inject_log = repo / "notes" / "inject_log.md"
@@ -479,8 +473,8 @@ def check_tick_execution(state: dict) -> None:
     asset-capable worker from this ambiguous state: the operator can be alive
     on a long turn or working through a backlog.
     """
-    if _webhook_mode() and not _webhook_configured():
-        return  # wakes are only logged to logs/wake_outbox.jsonl until the webhook is set
+    if _webhook_mode():
+        return  # Kimi/tick-eaten check retired; Investor is the webhook operator
     repo = Path(__file__).resolve().parent.parent
     skips = repo / "logs" / "cron" / "peer_skips.log"
     journal = repo / "notes" / "journal.md"

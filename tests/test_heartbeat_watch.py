@@ -238,7 +238,7 @@ def _write_proc(root: Path, pid: int, comm: str, ppid: int, uid: str = "1000") -
 
 def test_operator_tmux_live_accepts_philipp_grok_under_tmux(tmp_path: Path):
     _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
-    _write_proc(tmp_path, 9, "grok", 2)
+    _write_proc(tmp_path, 9, "opencode", 2)
 
     assert heartbeat._operator_tmux_live(tmp_path) is True
 
@@ -246,8 +246,8 @@ def test_operator_tmux_live_accepts_philipp_grok_under_tmux(tmp_path: Path):
 def test_operator_tmux_live_rejects_headless_grok_and_other_users(tmp_path: Path):
     _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
     _write_proc(tmp_path, 3, "bash", 1)
-    _write_proc(tmp_path, 9, "grok", 3)
-    _write_proc(tmp_path, 10, "grok", 2, uid="1003")
+    _write_proc(tmp_path, 9, "opencode", 3)
+    _write_proc(tmp_path, 10, "opencode", 2, uid="1003")
 
     assert heartbeat._operator_tmux_live(tmp_path) is False
 
@@ -257,7 +257,7 @@ def test_live_grok_session_does_not_require_named_operator_session(
 ):
     emitted = _capture_emit(monkeypatch)
     _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
-    _write_proc(tmp_path, 9, "grok", 2)
+    _write_proc(tmp_path, 9, "opencode", 2)
     monkeypatch.setattr(
         heartbeat.subprocess, "run",
         lambda *_args, **_kwargs: pytest.fail("tmux has-session must not be used"),
@@ -284,5 +284,45 @@ def test_absent_grok_session_alerts_without_calling_tmux(
     heartbeat.check_operator_session({"last_alerts": {}})
 
     assert emitted[0][0] == "operator_session_missing"
-    assert "grok tmux session is ABSENT" in emitted[0][1]
-    assert "pc-attach --start" in emitted[0][1]
+    assert "kimi opencode tmux session is ABSENT" in emitted[0][1]
+    assert "named `kimi`" in emitted[0][1]
+
+
+def test_webhook_mode_skips_kimi_session_checks(monkeypatch: pytest.MonkeyPatch):
+    emitted = _capture_emit(monkeypatch)
+    monkeypatch.setenv("POLYCLAUDE_OPERATOR_MODE", "webhook")
+
+    heartbeat.check_session_liveness({"last_alerts": {}})
+    heartbeat.check_tick_execution({"last_alerts": {}})
+    heartbeat.check_operator_session({"last_alerts": {}})
+
+    assert emitted == []
+
+
+def test_news_watcher_live_process_ignores_stale_state_file(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
+):
+    emitted = _capture_emit(monkeypatch)
+    monkeypatch.setattr(heartbeat, "_read_pid_file", lambda _env: 123)
+    monkeypatch.setattr(heartbeat, "_pid_alive", lambda _pid: True)
+    stale = tmp_path / "news_state.json"
+    stale.write_text("{}")
+    import os
+    os.utime(stale, (0, 0))
+    monkeypatch.setattr(heartbeat._secrets, "path", lambda _name: stale)
+
+    heartbeat.check_news_watcher({"last_alerts": {}})
+
+    assert all(key != "news_watcher_stale" and key != "news_watcher_no_state"
+               for key, _msg, _cd in emitted)
+
+
+def test_news_watcher_dead_process_still_alerts(monkeypatch: pytest.MonkeyPatch):
+    emitted = _capture_emit(monkeypatch)
+    monkeypatch.setattr(heartbeat, "_read_pid_file", lambda _env: 123)
+    monkeypatch.setattr(heartbeat, "_pid_alive", lambda _pid: False)
+    monkeypatch.setattr(heartbeat, "_pgrep", lambda _pattern: [])
+
+    heartbeat.check_news_watcher({"last_alerts": {}})
+
+    assert emitted[0][0] == "news_watcher_dead"

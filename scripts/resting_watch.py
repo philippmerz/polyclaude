@@ -390,7 +390,10 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
                 wake_agent(f"[resting_watch] FILL suspected: {key} — verify the fill, "
                            "journal it, and re-underwrite before any repost.", state,
                            force=True)
-                telegram(f"[resting_watch] fill suspected: {key}")
+                # telegram.py already routes to the webhook; skip it when the
+                # agent runner is the webhook so the same fill is not posted twice.
+                if os.environ.get("POLYCLAUDE_OPERATOR_MODE") != "webhook":
+                    telegram(f"[resting_watch] fill suspected: {key}")
             continue
 
         # Suspended rests wait for manual re-underwrite (agent decision).
@@ -473,9 +476,13 @@ def poll_loop() -> int:
                 except Exception as side_exc:
                     _log(f"error wake failed: {side_exc}")
                 try:
-                    if state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS:
+                    if (state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS
+                            and os.environ.get("POLYCLAUDE_OPERATOR_MODE") != "webhook"):
                         telegram(f"[resting_watch] ESCALATION: {state['consecutive_errors']} "
                                  f"consecutive cycle errors; last: {str(exc)[:140]}")
+                        state["consecutive_errors"] = 0
+                    elif state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS:
+                        # Webhook operator already got the wake_agent message.
                         state["consecutive_errors"] = 0
                 except Exception as side_exc:
                     _log(f"error telegram failed: {side_exc}")

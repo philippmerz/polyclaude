@@ -34543,3 +34543,14 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - ANT closed day one at $97.17. nasdaq.com shows a market cap of $1.2716T, below all LOW strikes.
 - SOLD LOW 1.4T YES 11.04 @0.999 ($11.03) and LOW 1.35T YES 6 @0.994 ($5.96). Kept 1.275T (5 sh, bid 0.963).
 - BOUGHT NO "Anthropic added to Nasdaq-100 by Dec 18" 14 @0.94 ($13.16). Thesis: under Nasdaq Fast Entry, ANT's 7th trading day (Nov 30) = Dec-recon reference date → added effective Mon Dec 21; the other branch is even later. Fair NO ~0.975. Invalidation: a Nasdaq announcement effective ≤ Dec 18 or an off-cycle deviation. See partner_dialogue.
+
+## 2026-11-20T08:15Z — Investor: Kimi retired; webhook is the sole operator path
+- Philipp cancelled the kimi.com subscription. Investor (Grok Bot) is now the sole polyclaude operator.
+- Stopped the OpenCode tmux session `kimi`. Supervisor no longer starts, heals, or 3-hourly auto-wakes it (sleep catch-up included). `scripts/kimi_session.sh` is kept but not called.
+- `POLYCLAUDE_OPERATOR_MODE=webhook` and `POLYCLAUDE_AGENT_RUNNER` now points at `scripts/wake_webhook.py`. News/order event wakes go to the Grok Bot webhook; health alerts already used that path. opportunity_watch and resting_watch fill/escalation no longer also inject a second copy.
+- Heartbeat: retired Kimi-only checks (tick eaten, journal stale / session likely dead, kimi tmux absent). Watcher and supervisor checks remain. news_watcher liveness is process-based (state-file mtime was noisy across box suspends).
+- `notes/operator_autoprompt.json`: scheduled_ticks off, event_wakes on.
+
+- 2026-11-20 09:14 CET: operator_cutover TEST WAKE 5833bca1aa73 received (webhook routing confirmed; Investor sole operator). Supervisor + 6 watchers up. No action.
+
+- 2026-11-20 09:14 CET: news_watcher wake 522817b5e316 (CiudadCCS: Delcy Rodríguez promulgates Electricity Service Law reform) on Venezuela-leader-end-2026 market: routine governance news, consistent with status quo; non-material. Supervisor + 6 watchers up. No action.

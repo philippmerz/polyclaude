@@ -3,9 +3,9 @@
   "event_wakes": true,
   "self_followups": false,
   "goal_set": false,
-  "since_utc": "2026-11-02T13:05Z",
-  "set_by": "Grok Bot (co-lead), on Philipp's instruction 2026-11-02",
-  "why": "Philipp: no automatic ticks; waking the operator (K3.1, tmux 'kimi') on urgent news is still fine and beneficial. Otherwise the operator is prompted on demand.",
+  "since_utc": "2026-11-20T08:30Z",
+  "set_by": "Grok Bot (Investor), on Philipp cancelling the kimi.com subscription 2026-11-20",
+  "why": "Philipp cancelled the Kimi subscription; Investor is the sole operator. Scheduled 3-hourly Kimi auto-wakes are off. Event wakes (news, opportunity, resting orders) go to the Grok Bot webhook. Health alerts already used that path.",
   "scope": "Gate: scripts/autoprompt_policy.py, called by scripts/daily_checkin.sh and scripts/inject_prompt.sh. scheduled_tick = daily_checkin.sh run by cron or by hand with any reason other than the two daemon review requests. event_wake = daily_checkin.sh 'NEWS REVIEW REQUEST:' (news_watcher) or 'REVALIDATION REQUEST FROM OPPORTUNITY WATCH:' (opportunity_watch). self_followup = operator_followup.sh timers. goal_set = goal_inject.sh set ('/goal clear' always passes). resting_watch CRITICAL wakes and telegram_listener (Philipp's messages) queue directly and are not gated. The 3-hourly crontab line is also commented out.",
-  "re_enable": "Set scheduled_ticks true and uncomment the daily_checkin line from ~polyclaude/.polyclaude/crontab_backups/crontab.20261102T1239Z.bak."
+  "re_enable": "To restore Kimi: set POLYCLAUDE_OPERATOR_MODE=opencode and POLYCLAUDE_AGENT_RUNNER to polyclaude-agent in scripts/box_env.sh, uncomment kimi_session.sh and the 3-hourly check-in in scripts/box_supervisor.sh, and set scheduled_ticks true here."
 }
