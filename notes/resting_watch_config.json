@@ -50,8 +50,8 @@
    "alert_keys": [
     "messi"
    ],
-   "justification": "Ordinary public-info class: rest at/above fair 0.60. Venue min is 5 sh, so this rests the entire 5-sh leg; fills only on year-end euphoria >= 0.65 (double the mark). 72h lifetime; cancel-first on MATERIAL+ Messi injury/retirement alerts.",
-   "enabled": true,
+    "justification": "Disabled 2026-11-11 after the unfitted 0.60 thesis was revised to 0.30 central / 0.20 stress on competitor-growth and perennial-baseline evidence; the executable exit exceeds hold value.",
+    "enabled": false,
    "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69"
   },
   {

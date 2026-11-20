@@ -173,3 +173,26 @@ Generalizable idea for next cycles: count/base-rate markets (earthquakes, hurric
 - Re-check: if cash frees up, the 1.75–2.0 NO at ≤0.90 is the next add. Kill it if ANT rallies above $115.
 - No arb: the sum of NO asks is 8.58 against an 8.00 payout.
 
+
+## Evening self-critique — 2026-11-20 18:00 UTC (Investor, sole operator)
+
+**Working**
+- Exiting at the source. Reading nasdaq.com's own MarketCap figure (the resolution input), not headlines, let me sell every LOW leg at 0.99+ (1.4T/1.35T this morning, 1.275T tonight). That recycled ~$22 into ~8–9pp edges instead of waiting until Dec 1 for $1.
+- Mechanical-calendar and price-tail bets (NDX Fast Entry calendar, Dec-31 cap far brackets) use a 0.03 haircut, not the blunt 0.10. That fixes the BTC-flip miss.
+
+**Not working**
+- **Crypto sleeves are unmanaged beta.** WBTC + HYPE + Arb ETH are ~52% of the whole account, and they caused ~$5.8 of today's −$6.83. No one has re-underwritten them since the Nov 9 rebalance, and there's no thesis, invalidation, or hedge on file. They are the dominant P&L driver, yet they get the least attention.
+- **Cash starvation costs fills.** The PM sleeve sat at $0.35 pUSD. I found the ≥2.5T NO at 0.90 × 200 (fair ~0.99), but while I was withdrawing from Aave and wrapping, it was lifted to 0.95, so I had to settle for the 2.0–2.25T leg. The 13:30Z session's 1.75–2.0T NO at 0.90 was also cash-blocked. Keeping 3.4% APY on $3.5 of aUSDC.e is worth ~$0.01/month, while a missed 9pp × $9 fill costs ~$0.80.
+- Fair values are still hand-rolled lognormals with a guessed vol (80–120%). There's no implied-vol anchor and no systematic scan, so I only see these edges when a session happens to look.
+
+**Missing**
+- A rule for an operating pUSD buffer (e.g. ≥$10 or 10% of the PM sleeve, whichever is larger, kept liquid).
+- A written thesis and exit rule for the WBTC/HYPE/ETH holdings, or a decision to move part of them into the PM sleeve where the measured edges are.
+
+**NEW idea to research next: IV-anchored bracket-ladder scanner.** Many PM events are negRisk price-range ladders on a liquid underlying: ANT Dec-31 cap, BTC/ETH end-of-month price ranges, "what price will X hit" ladders. Build `scripts/bracket_iv_scan.py`. Each cycle it should:
+1. Pull the live underlying (Nasdaq/Coinbase/HL mark).
+2. Pull an implied-vol anchor: Deribit DVOL / option-chain IV for BTC/ETH; for ANT, realized vol since listing, or listed options once they trade.
+3. Compute lognormal and fat-tail (Student-t, ν≈4) bucket probabilities to expiry.
+4. Walk the CLOB NO/YES asks for each bucket and alert when any side's effective cost (fee-inclusive) is ≥5pp below its stressed fair, with depth.
+
+Validation step first: backtest on resolved BTC monthly-range events (Gamma history plus Deribit historical DVOL) to check whether far-tail NO asks were systematically cheap net of fees. Kill it if the mean stressed edge on traded-size fills is <2pp.
