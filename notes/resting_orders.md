@@ -1,5 +1,10 @@
 # Current resting orders — October 26, 10:32 UTC
 
+## 2026-11-11 14:00 UTC — current overlay
+
+- **Wellington Nov-12 exactly-20°C NO BUY 7 @0.56**, $3.92 committed, order `0xb3e17d6a7824be37a08aeda80a59403f3552d0d8d44089f0624e5fdbe0d65e09`, DEC-0281: LIVE/0 matched. Post-only maker entry; no taker fallback. Revalidate literal NZWN routine-METAR rule, target-date observations, models, book and full-fill exposure on each scheduled review. Cancel on any qualifying routine 20°C, fresh model shift toward ≥19.5°C, or an adverse economics/identity change. Hold any filled ticket to fee-free resolution; thin-book exit is not the thesis.
+- Other LIVE/unmatched orders: Kimi-HLE SELL 15@0.97, Delcy SELL 10@0.70 and USGS 11–13 YES SELL 28.31@0.18. Messi's premium rest is disabled; DEC-0280 sold all 5 YES at 0.41 for 1.98953 pUSD net. No other BUY commitment.
+
 **20:14 UTC exits:** Michigan 5 NO sold FOK at 0.32 for $1.60. OpenRouter 5 NO sold FOK at 0.75 for $3.75. The table below is the 10:32 book.
 
 **No visible open orders. #179 remains terminal-unknown.** It holds 19.993158 YES with $4.798358 historical cost; HTTP 200/JSON null is not terminal proof. The reconciliation block stops new buys on that condition and asset only. Reserve the unindexed tail, not the indexed $4.80. No cancel, prune, repost, release or burn without affirmative terminal proof; two zero-value claims remain unburned and DEC223 $1.02 is historical booked value. [Check](../research/2026-10-26-1030-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).

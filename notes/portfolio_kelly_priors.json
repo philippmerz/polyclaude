@@ -2254,5 +2254,19 @@
     "condition_id": "0xdbb193284b46e5873a4c92ab9053fcac210e71bf43ccee8bb08511894b87a29f",
     "criteria_sha256": "f433ff1740ae5420d9330fbbb677148c77523d94fdb0a0a5b2411e2b01708ed2",
     "rationale": "Investor 2026-11-20: Nasdaq Fast Entry (nasdaq.com 'How Fast Entry Works', 19 Nov 2026): ANT day1=Nov19; 7th trading day=Nov30 (Thanksgiving Nov26 closed, Nov27 half day counts) = Dec reconstitution reference date (last trading day of Nov) -> added with Dec recon, effective at open on first trading day after 3rd Friday = Mon Dec 21. If 7th day were after ref date -> no sooner than 5 trading days after Dec 21. Either branch -> NOT effective by Dec 18. Rules: after-close Dec18 counts as Dec21. YES only via Nasdaq discretion/off-cycle deviation. Independent of ANT price path."
+  },
+  "will-anthropics-market-capitalization-be-between-2pt25t-and-2pt50t-at-the-end-of-december-2026": {
+    "p_yes": 0.015,
+    "p_no": 0.985,
+    "p_no_stress": 0.955,
+    "cluster": "anthropic-dec31-cap-tail",
+    "rho_within": 0.0,
+    "cluster_frac": 0.0,
+    "verified": "2026-11-20",
+    "criteria_read": "2026-11-20",
+    "market_id": "7179285",
+    "condition_id": "0xe21cc44dc780344d04b3206772ddf7c9379226a0457f858492435065e8861e31",
+    "criteria_sha256": "51da5e8edd8b5f8de23370baec1fbf62874f0b58ecb84d20049d075db6b6c209",
+    "rationale": "Investor 2026-11-20: cap = Nasdaq NOCP Dec31 x all economic share classes from latest filing (S-1/A2: 13,086,672,593 A+N+T+E+F after offering; ~13.24B after upsize; shoe excluded unless disclosed). 2.25T-2.5T needs ANT ~$170-189 vs $88.02 pre-market Nov 20 (+93% to +115% in 28 sessions). Lognormal at 80-100% ann vol: P(bracket) 0.5-1.4%; fat-tail stress 4.5%. Invalidation: share count restated far higher (e.g. FD basis) or ANT > $140 before mid-Dec."
   }
 }

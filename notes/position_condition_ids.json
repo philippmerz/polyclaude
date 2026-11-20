@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-11-09",
+ "_refreshed": "2026-11-12",
  "positions": [
   {
    "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
@@ -13,17 +13,17 @@
   {
    "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
    "outcome": "Yes",
-   "size": 64.5,
+   "size": 84.5,
    "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
    "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
    "negativeRisk": false
   },
   {
-   "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+   "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
    "outcome": "Yes",
-   "size": 5.0,
-   "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
-   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+   "size": 29.0,
+   "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+   "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
    "negativeRisk": false
   },
   {
@@ -33,14 +33,6 @@
    "conditionId": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
    "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
    "negativeRisk": true
-  },
-  {
-   "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
-   "outcome": "Yes",
-   "size": 29.0,
-   "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
-   "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
-   "negativeRisk": false
   },
   {
    "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",

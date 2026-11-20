@@ -148,3 +148,28 @@ Generalizable idea for next cycles: count/base-rate markets (earthquakes, hurric
 - Google's 2026 hub remains 404. Current official methodology confirms fastest prior-year-period traffic growth using internal tools, Jan 1–Nov 25 for 2025; it is not raw volume and provides no reproducible scoring export. Public normalized Trends data cannot reconstruct the internal Global Athletes list. Historical absence from displayed 2021–25 top tens was already in the original thesis and is not a new base-rate estimate.
 - Fresh football/FIFPRO items supply no ranking measurement. With no new exact full-field observation, retain the unfitted 0.60 central / 0.40 selected-stress estimate as dated, not newly validated. No add at 0.49 and no taker profit at the 0.43 bid.
 - Renewed all 5 YES SELL @0.65 before the old order's 18:03Z lifetime boundary: new order `0x6428a01147745e273ff62619c5c3f69e87c0fa135114456ab71ce24331e6809d`, LIVE/0 matched; old `0xdc97243e…` canceled. Potential $3.25 exceeds central $3.00 hold value. Invalidation: official 2026 list/method/cutoff, measured full-field data against Messi, or a known scheduled release inside the quote window. DEC-0279.
+
+## Niche iteration — 2026-11-11 14:00 UTC
+
+### Q1 Messi perennial-baseline re-underwrite — EXITED
+- The old 0.60 estimate was unfitted and lacked a measured full-field growth comparison. Google's spike-versus-prior-year method, Messi's absence from the displayed 2022 World Cup-year list, and stronger 2026 breakout competitors do not support that fair. Revised YES to 0.30 central / 0.20 stress; a sustained YES case would require measured internal-growth evidence against Haaland/Liu/Malinin and other breakouts, not more ordinary Messi headlines.
+- Sold all 5 YES at 0.41 through guarded FAK SELL; gross $2.05, wallet-verified net **1.98953 pUSD**, above $1.50 central/$1.00 stressed hold. Order `0x76beee0db369615c5686f8d9c85ccf8efe780a2de3964af5ab94cb43325a525b`, tx `0x46f177692340027563f939b4970b2132399cc08b9d08dca3036815ace9e1e95f`; DEC-0280. Premium rest disabled; no re-entry without fresh full-field evidence.
+
+### Q2 PM/Kalshi largest-earthquake nesting — KILLED as a trade
+- Nov-11 PM event 1346377 and Kalshi `KXBIGGESTQUAKE-11NOV26` share USGS/ComCat and UTC day, but PM preferred magnitude/nearest-tenth/revisions through 14:00 ET Nov12 differ from Kalshi reviewed/primary-magnitude/expiration rules. Settlement equivalence is not proved.
+- Genuine shared-magnitude inclusions exist: `K>=6.2 => PM 6.1+ => K>=6.0`; `K<5.2 => PM Under-5.3 => K<5.4`. PM 6.1+ YES was 0.01/0.92 versus Kalshi >=6.0 YES 0.13/0.17 and >=6.2 YES 0.08/0.11: no violation or cheap reference edge. All 12 PM sides failed the 0.10 haircut at five shares and every quoted five-share debit exceeded available cash; cheapest was $4.570475. Kalshi remains an unfunded reference, not an execution leg. Nov12 had PM event 1354211 but no naturally listed Kalshi counterpart in the 72-event series response.
+
+### Q3 Whole-degree weather rules — WELLINGTON MAKER LEAD; MEXICO LOW KILLED
+- The screen already handles SPECI exclusion and rounding; there is no standalone loophole. Wellington is an instance-level model/observation dislocation. Market 6923347, condition `0x3df151e6dc29b77500a1659a2f87564d9e6f3469d06d2007ccc42dd0327272e4`: exactly20C requires routine NZWN Nov12-local qualifying value in [19.5,20.5). Target-date routine max 17C through 13:30Z; deterministic ECMWF/GFS/ICON/GEM/UKMO maxima 17.5/17.4/18.1/17.8/18.4C; raw 82-member ECMWF+GFS ensemble 0/82>=19.5. Six-day bias/wider-error sensitivity remains below threshold.
+- Use conservative P(NO)=0.90 (0.80 stress), not the fitted 0.947 central, against NO bid/ask 0.55/0.60. `polyclaude_enter` cleared UMA, robust edge, $3.92 ticket and unique `wx-nzwn-2026-11-12` cluster caps. Posted post-only BUY 7 NO @0.56, **$3.92**, LIVE/0 matched: `0xb3e17d6a7824be37a08aeda80a59403f3552d0d8d44089f0624e5fdbe0d65e09`, DEC-0281. No taker fallback; any routine20C, model shift toward>=19.5 or adverse rewalk cancels.
+- Mexico City Nov12 exactly14C NO failed: model disagreement and measured residual gave only ~0.861 stressed NO; five-share taker $4.474475 exceeded cash and maker0.88 was negative under the 0.10 haircut. Scan bound: 91/94 Nov12 events/1,001 bins completed after mapping/HTTP exclusions; only Wellington and Mexico received deep verification, not an exchange-wide zero.
+
+## Niche iteration — 2026-11-20 13:30 UTC
+
+### R1 ANT post-IPO price markets (open Anthropic book): one LEAD traded, one killed
+- "Above IPO price at end of first month" (measurement Nov 30 close, IPO $83): ANT pre-market $88.02. 6 sessions at ~5.5% daily σ gives P(Up) ≈ 0.67. Greenshoe stabilization near $83 adds a few points → fair ~0.70 vs a 0.58/0.72 book. **KILLED**: no edge on either side.
+- Dec-31 market-cap brackets (negRisk event, nine buckets): the books are hollow (YES asks 0.6–0.7, mids ~0.35 are meaningless). Share basis read from S-1/A2: 13.087B all classes (A+N+T+E+F), ~13.24B after the upsize, so the cap is ~$1.165T at $88. Lognormal bucket fairs (70–100% vol): <750B 3–10%, 0.75–1.0 ~23%, 1.0–1.25 ~36%, 1.25–1.5 ~24%, 1.5–1.75 ~10%, 1.75–2.0 3–6%, 2.0–2.25 ~1%, 2.25–2.5 0.3–1.4%, ≥2.5 <0.5%.
+- NO asks vs fair: 2.25–2.5 0.94 vs 0.985 (**TRADED** 7 sh); 1.75–2.0 0.90 vs 0.94–0.97 (vol-sensitive, cash-limited, not traded); ≥2.5 0.97 vs 0.995; 2.0–2.25 0.98 vs 0.99; <750B 0.95 vs 0.90–0.97 (no).
+- Re-check: if cash frees up, the 1.75–2.0 NO at ≤0.90 is the next add. Kill it if ANT rallies above $115.
+- No arb: the sum of NO asks is 8.58 against an 8.00 payout.
+

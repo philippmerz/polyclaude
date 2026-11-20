@@ -34554,3 +34554,16 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - 2026-11-20 09:14 CET: operator_cutover TEST WAKE 5833bca1aa73 received (webhook routing confirmed; Investor sole operator). Supervisor + 6 watchers up. No action.
 
 - 2026-11-20 09:14 CET: news_watcher wake 522817b5e316 (CiudadCCS: Delcy Rodríguez promulgates Electricity Service Law reform) on Venezuela-leader-end-2026 market: routine governance news, consistent with status quo; non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-20 09:57 CET: news_watcher wake 9ac482ce1c03 (Telemundo: US and Venezuela agree to restore military ties after Maduro capture) on Venezuela-leader-end-2026 market: bilateral normalization with the sitting government, consistent with status quo; non-material. Supervisor + 6 watchers up. No action.
+
+- 2026-11-20T10:25:25.800Z event wake c449a534e407 (news_watcher, Alba Ciudad: Presidenta Delcy Rodríguez promulga reforma a la Ley del Servicio Eléctrico) on will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026: routine governance act, consistent with status quo; non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-20 13:56 CET news_watcher wake 67cb1bb01107 (Infobae: Delcy Rodríguez promulgated Electricity Service Law reform) on Venezuela-leader-end-2026: same routine presidential act as c449a534e407 earlier today, non-material; no action.
+
+## 2026-11-20T13:30Z — Investor operator session (TRADE + infra fix)
+- **Infra:** box restore ~10:32Z wiped the gitignored `.venv` and `scripts/clob_node/node_modules`. The supervisor and all 6 watchers had been dead since then (heartbeat age 8547s). Rebuilt the venv from requirements.txt, ran `npm ci` in clob_node, and restarted with `box_ctl.sh start`. Supervisor + 6 watchers are back up and the webhook outbox is OK. News between ~10:30Z and 13:15Z queued as "agent unavailable: exit 75". Reviewed it (Guardian/Fortune/Bloomberg IPO color): non-material.
+- **Held:** ANT pre-market $88.02 (−9.4%). NDX-by-Dec-18 NO: the mark fell to 0.825, but that is only the mid of a 0.71/0.94 book. Bloomberg via stockanalysis confirms ANT is on track for Mon Dec 21 → thesis intact, hold. LOW 1.275T bid 0.964 → hold to resolution. Clarity pair, HLE, Delcy and quake are unchanged.
+- **Missed:** "Anthropic flip BTC by Dec 31" resolved YES. On Nov 17 I killed it at 0.82 because of the 0.10 haircut (fair was 0.87). This repeats the lesson: on mechanically resolving markets, a flat 0.10 haircut is too blunt.
+- **TRADE:** BOUGHT NO "Anthropic market cap $2.25T–$2.50T at end of Dec 2026" 7 @0.94 ($6.58, FAK matched), order 0x20be2a88…fd55, tx 0x105e9c00…c472. Geoblock NL.
+  - Thesis: cap = Nasdaq NOCP Dec 31 × all economic share classes from the latest filing (S-1/A2: 13.087B; ~13.24B after the upsize). The bracket needs ANT at about $170–189, i.e. +93% to +115% in 28 sessions. Lognormal at 80–100% annual vol gives P(YES) 0.5–1.4%; with a fat-tail stress, ≤4.5%. Fair NO is ~0.985 vs 0.94 paid. Ran polyclaude_enter with edge-haircut 0.03 (mechanical, price-based resolution). Added cluster `anthropic-dec31-cap-tail` to portfolio_kelly_priors.
+  - Invalidation: a filing restating the share count far higher (e.g. an FD basis of ~18B would put the bracket at $125–139), or ANT above ~$140 before mid-December.
+
