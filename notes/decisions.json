@@ -1,5 +1,5 @@
 {
-  "next_id": 280,
+  "next_id": 283,
   "decisions": [
     {
       "id": 1,
@@ -6049,6 +6049,67 @@
         "renewal"
       ],
       "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 280,
+      "timestamp": "2026-11-11T13:25:17Z",
+      "type": "close_position",
+      "thesis": "Re-underwriting Google's growth-versus-prior-year method against Messi's perennial baseline and stronger 2026 breakout competitors cut the unfitted YES estimate from 0.60 to 0.30 central / 0.20 stress. With no official-list release or new full-field measurement, the executable 5-share taker exit at 0.41 produced 1.98953 pUSD net, above 1.50 central and 1.00 stressed hold value; entry cost is sunk. FAK order 0x76beee0db369615c5686f8d9c85ccf8efe780a2de3964af5ab94cb43325a525b matched; tx 0x46f177692340027563f939b4970b2132399cc08b9d08dca3036815ace9e1e95f.",
+      "confidence": "medium",
+      "prediction": "Messi is absent from Google's official 2026 Global Athletes top five; the cash exit will have preserved value versus holding the revised-probability ticket.",
+      "size_usd": 2.05,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "messi",
+        "exit",
+        "thesis-break",
+        "google-year-in-search"
+      ],
+      "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 281,
+      "timestamp": "2026-11-11T13:59:10Z",
+      "type": "open_position",
+      "thesis": "Wellington exactly-20C NO is a short-horizon instance/weather mispricing. Literal NZWN rules use routine Nov-12 local METAR T remarks or whole-degree body values, excluding SPECI; 20C requires [19.5,20.5). Target-date routine max was 17C through 13:30Z. Fresh deterministic ECMWF/GFS/ICON/GEM/UKMO maxima were 17.5/17.4/18.1/17.8/18.4C and raw 82-member ECMWF+GFS ensemble had 0/82 >=19.5C. Six-day station bias plus a 1.5C error sensitivity retained robustness. Use conservative P(NO)=0.90 (0.80 stress), versus post-only 0.56 cost; no taker fee, seven-share ticket .92, unique daily-station cluster, hold to fee-free resolution. Routine 20C, fresh model shift toward >=19.5C, or adverse rewalk invalidates. Order 0xb3e17d6a7824be37a08aeda80a59403f3552d0d8d44089f0624e5fdbe0d65e09.",
+      "confidence": "medium",
+      "prediction": "No qualifying routine NZWN observation on Nov 12 local time rounds to 20C, so the NO share resolves to ; the resting BUY may remain unfilled without cost.",
+      "size_usd": 3.92,
+      "resolution_at": "2026-11-13",
+      "tags": [
+        "weather",
+        "nzwn",
+        "maker",
+        "short-horizon"
+      ],
+      "slug": "highest-temperature-in-wellington-on-november-12-2026-20c",
+      "outcome": "Canceled unfilled at 2026-11-11T18:00:42Z; no Wellington position appeared and pUSD remained 4.452462. Authenticated order lookup later returned HTTP 200/null; the local CLI cancellation marker is preserved. No purchase, fee, cash debit, or market-outcome grade.",
+      "calibration_delta": "N/A \u2014 unexecuted maker bid",
+      "lesson": "A rested bid is not a position; reconcile order, position and cash before further entries. The orphan prior needs a closure note.",
+      "resolved_at": "2026-11-11T18:46:20Z"
+    },
+    {
+      "id": 282,
+      "timestamp": "2026-11-11T18:46:29Z",
+      "type": "strategy_change",
+      "thesis": "Kimi HLE premium SELL 15 YES at 0.97 reached its 72-hour lifetime and was pulled at 18:18Z. The old order did not fill: the live position remained 64.5 YES and the cancellation preceded the fill-suspected webhook. Fresh source_watch at 18:45Z still shows no qualifying Kimi >=55 row. Renewed the same hidden-info premium offer because 0.97 remains above the 0.95 post-jump fair; replacement order 0x35b596ffd3d56eb1fd7ff365e59c325f70b51e0d9d2cf0b0d3fd1bd55fe69b14 is LIVE/0 matched.",
+      "confidence": "medium",
+      "prediction": "The replacement sells 15 YES only at 0.97 or remains costlessly unfilled; it does not alter the underlying HLE forecast.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-14",
+      "tags": [
+        "kimi",
+        "hle",
+        "premium-sell",
+        "renewal"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
