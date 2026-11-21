@@ -196,3 +196,8 @@ Generalizable idea for next cycles: count/base-rate markets (earthquakes, hurric
 4. Walk the CLOB NO/YES asks for each bucket and alert when any side's effective cost (fee-inclusive) is ≥5pp below its stressed fair, with depth.
 
 Validation step first: backtest on resolved BTC monthly-range events (Gamma history plus Deribit historical DVOL) to check whether far-tail NO asks were systematically cheap net of fees. Kill it if the mean stressed edge on traded-size fills is <2pp.
+
+## 2026-11-21 ~09:10 CET — Anthropic Dec-31 cap ladder: ≥$2.5T NO
+- Lead: NO on "≥$2.50T at end of Dec" ask 0.93 (eff 0.9333) vs fair ~0.985 (needs ANT ≥ ~$189, +113% from $88.91 in 28 sessions). Rule counts issued/outstanding shares only (options/RSUs excluded), so the Yahoo "$1.75T FD" headline is irrelevant. Edge ~5–7pp, disjoint from held 2.0–2.25T / 2.25–2.5T NO (at most one of three loses).
+- Blocked by cash: pUSD only $0.76, Aave empty, crypto-sleeve USDC ~$1. Not funded by selling WBTC/HYPE (swap cost > ~$0.7 expected profit). Resting maker attempt (11 @0.91) rejected for balance; nothing placed.
+- Gate: polyclaude_enter cluster cap `anthropic-dec31-cap-tail` leaves $11.10 headroom.
