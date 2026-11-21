@@ -201,3 +201,11 @@ Validation step first: backtest on resolved BTC monthly-range events (Gamma hist
 - Lead: NO on "≥$2.50T at end of Dec" ask 0.93 (eff 0.9333) vs fair ~0.985 (needs ANT ≥ ~$189, +113% from $88.91 in 28 sessions). Rule counts issued/outstanding shares only (options/RSUs excluded), so the Yahoo "$1.75T FD" headline is irrelevant. Edge ~5–7pp, disjoint from held 2.0–2.25T / 2.25–2.5T NO (at most one of three loses).
 - Blocked by cash: pUSD only $0.76, Aave empty, crypto-sleeve USDC ~$1. Not funded by selling WBTC/HYPE (swap cost > ~$0.7 expected profit). Resting maker attempt (11 @0.91) rejected for balance; nothing placed.
 - Gate: polyclaude_enter cluster cap `anthropic-dec31-cap-tail` leaves $11.10 headroom.
+
+## 2026-11-21 ~14:05 CET — Investor operator session: BTC touch-ladder vs Deribit skew (KILLED)
+- Idea (first test of the IV-anchored bracket scanner): price "What price will Bitcoin hit in November" / "Nov 16-22" touch ladders with a driftless-GBM barrier model anchored on Deribit, and fade any tail side priced >=5pp off stressed fair.
+- Live data 13:00Z: BTC index $58,789, Nov range $55,130-$81,196 (Coinbase daily), DVOL 59.6, 7d realized (hourly) 76%. Deribit 27NOV26 puts: 52k IV 77.9 (d -0.097), 50k 84.1 (d -0.057), 48k 91.1 (d -0.034) — steep crash skew.
+- Nov touch asks (YES bid/ask): 55k 0.479/0.48, 52.5k 0.27/0.28, 50k 0.164/0.165, 47.5k 0.109/0.127, 45k 0.06/0.076; upside 82.5k+ all <=0.013 (dust). Flat-DVOL model said 45k/47.5k NO had 3-8pp edge, but that is just the skew: at strike-matched IV (~85-100%) touch ~= 2x digital gives 50k ~0.16, 47.5k ~0.11-0.13, 45k ~0.08-0.10 — on or above market.
+- Verdict: KILLED. Liquid PM BTC touch ladders (~$55-125k liquidity per strike) track Deribit skew within ~1-2pp; no edge net of spread. Lesson for the scanner: anchor on strike-matched option IV (skew), never flat DVOL. Remaining scanner value is only on underlyings without listed options (ANT until its options list; small caps).
+- Also blocked regardless: pUSD ~$0.76.
+

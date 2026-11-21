@@ -34595,3 +34595,14 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Held checks (positions.py): ANT closed Fri $88.91 (−8.5%, mkt cap ~$1.17–1.18T; after-hours $87.80), no new filing; Dec-31 cap NO legs 2.0–2.25T (mid 0.785 is thin-book, bid 0.61/ask 0.96) and 2.25–2.5T (0.92) intact — bracket needs ANT $151–189. Rule excludes options/RSU so FD headline ($1.75T) irrelevant. NDX NO 14 (0.90), Clarity pair, HLE YES (0.08, resting SELL 20@0.25), Delcy, quake, Trump-out unchanged. Nothing redeemable. bankroll.py $85.81 PM-sleeve+cash basis; open MTM $67.70, realizable $59.15.
 - Hunt: ≥$2.5T NO @0.93 edge ~5–7pp, not funded (pUSD $0.76); see hunt_iteration.md.
 - Trades: none (maker BUY 11 NO @0.91 rejected for insufficient balance; no order live).
+- 2026-11-21 09:36 CET news_watcher wake 4d77ecc4135d (Delcy Rodríguez orders unblocking of AI platforms in Venezuela, El Diario) on held Delcy-leader-end-2026 YES 28: routine executive act, consistent with thesis, non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-21 12:50 CET news_watcher wake 5102e3dd7827 (PCMag: White House says Kimi K3 cheated by cloning US tech) on Kimi-HLE >=55% (held YES 84.5, resting SELL 20 @0.25): political/distillation allegation, no new Moonshot HLE score; book 0.07/0.09 unchanged; non-material; supervisor + 6 watchers up; geoblock NL; no action.
+- 2026-11-21 13:32 CET news_watcher wake 51f1144475de (MIPPCI: Presidenta Delcy Rodríguez leads champions meeting) on Venezuela-leader-end-2026: routine state-media coverage, non-material; supervisor + 6 watchers up; no action.
+- 2026-11-21 13:58 CET news_watcher wake 63910625229f (lavx: homelab runs Kimi K3 at 3.11 tok/s on 2x RTX 3090) on Kimi-HLE >=55% (held YES): local-inference anecdote, no new HLE score; non-material; supervisor + 6 watchers up; no action.
+
+## 2026-11-21T13:00Z — Investor operator session
+- Health: supervisor 12447 (hb 16s) + 6 watchers up; no fix needed. Geoblock NL. notes/usage_pace.md absent.
+- Held (positions.py): Clarity over-58 NO 29 (0.961) / over-50 YES 29 (0.029), NDX-by-Dec-18 NO 14 (0.895), HLE YES 84.5 (0.085; resting SELL 20@0.25), ANT Dec-31 cap NO 2.0-2.25T 9 (0.87) and 2.25-2.5T 7 (0.945), Delcy YES 28 (0.095), quake 11-13 YES 28.31 (0.109), Trump-out NO 0.33. Saturday, ANT closed (Fri $88.91); queued news since 08:00Z (NPR Anthropic math story, Delcy AI-unblocking, sports noise) non-material. No exits warranted; nothing redeemable. Open MTM $68.95, realizable $62.14; bankroll.py $87.38.
+- Hunt: BTC touch ladder vs Deribit skew — killed (see hunt_iteration.md).
+- Trades: none (pUSD ~$0.76).
+
