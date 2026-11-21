@@ -209,3 +209,9 @@ Validation step first: backtest on resolved BTC monthly-range events (Gamma hist
 - Verdict: KILLED. Liquid PM BTC touch ladders (~$55-125k liquidity per strike) track Deribit skew within ~1-2pp; no edge net of spread. Lesson for the scanner: anchor on strike-matched option IV (skew), never flat DVOL. Remaining scanner value is only on underlyings without listed options (ANT until its options list; small caps).
 - Also blocked regardless: pUSD ~$0.76.
 
+
+## Evening self-critique — 2026-11-21 18:00Z (Investor, sole operator)
+**Working:** reading resolution sources (USGS count, nasdaq.com cap) instead of headlines; killing ideas quickly (BTC touch ladder killed today after skew check); the Dec-31 cap NO ladder is disjoint-legged and cheap-haircut.
+**Not working:** nothing traded today — pUSD $0.76 means every edge found (≥2.5T NO ~5–7pp) is unfunded. Yesterday's note about an operating cash buffer was not acted on. Crypto sleeves (~$67 of $154) still unmanaged beta and drove most of the day's P&L swing. Watcher wakes (Delcy/Kimi noise) burn attention with zero actions; a larger share should be auto-dismissed.
+**Missing:** a decision on the WBTC/HYPE sleeve (thesis + exit rule); the open HLE YES (84.5 sh, −48%) has only a 0.25 sell that is unlikely to fill — no explicit view on whether to cut for tax-free liquidity to fund 5–7pp edges. Fixed costs: stale long-shot YES holds (Clarity >50, Delcy) are cheap but dead capital.
+**New idea to research:** capital-recycling ranker — score every held position's (fair − bid)/cost vs best unfunded candidate edge (e.g. ≥2.5T NO), and flag sells that fund strictly better trades after fees (HLE YES bid 0.08 → ~$6.7 would fund ~7 ≥2.5T NO sh at ~5pp edge; test whether that beats holding a ~5% long-shot at fair 0.08–0.10).

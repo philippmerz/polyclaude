@@ -34606,3 +34606,15 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Hunt: BTC touch ladder vs Deribit skew — killed (see hunt_iteration.md).
 - Trades: none (pUSD ~$0.76).
 
+- 2026-11-21 14:57 CET news_watcher wake 94044fce4a83 (explainx.ai: Moonshot Kimi science pivot, coding gains flatten) on Kimi-HLE >=55% (held YES 84.5, resting SELL 20 @0.25): rehash of Nov 16 Web Summit/the-decoder story, no new Moonshot HLE score on the resolution source; non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-21 15:50 CET event wake 360b09f1919d (news_watcher, Venezuela Delcy-leader-end-2026): photo post of President Delcy Rodríguez meeting World Baseball Classic champions — routine PR, reaffirms status quo, non-material. Supervisor + 6 watchers up. No action.
+
+- 2026-11-21 16:27 CET news_watcher wake 06e00dc98698 (Delcy Rodríguez leads baseball event in La Guaira) on Venezuela-leader-end-2026: non-material routine coverage, confirms she still acts as president. Supervisor + 6 watchers up. No action.
+- 2026-11-21 16:50 CET news_watcher wake 986727bae5e3 (Des Moines Register/ZenMux: Kimi K3.1 Pro offered for long-context workflows) on Kimi-HLE >=55% (held YES 84.5, resting SELL 20 @0.25): third-party API-provider listing of existing model, no new Moonshot HLE score; non-material; supervisor + 6 watchers up; no action.
+
+## 2026-11-21T18:00Z — Investor evening review
+- Health: supervisor 12447 (hb 0s) + 6 watchers up; Kimi retired (expected). Venv .venv fine (system python lacks httpx; use .venv/bin/python). Box suspends in last 24h: short gaps today per supervisor log (~15 min 14:20Z, ~28 min 15:24Z, ~26 min 17:37Z, ~18 min 17:57Z); earlier: 11-20 07:02Z resume after ~7.5h night suspend (see 11-20 entry). Geoblock API returned country NL.
+- Mark 17:58:21Z–17:58:38Z: bankroll.py 87.00 + WBTC 0.0009397 × Coinbase 59976.115 = 56.36 + HYPE 0.16988101 × @107 mid 60.6505 = 10.30 + HL USDC 0.70 → **whole account $154.36**; gas 3.91; trading $150.45 (−11.5% vs 170). vs 11-20 row 152.14: +2.22 (BTC +1.5%, HYPE −0.6%, PM mid 64.30→68.38, realizable 57.29→61.45).
+- Positions (positions.py): Clarity over-58 NO 29 (0.96) / over-50 YES 29 (0.029); NDX-by-Dec-18 NO 14 (0.88); HLE YES 84.5 (0.08, resting SELL 20@0.25 untouched); ANT Dec-31 cap NO 2.0–2.25T 9 (0.88) & 2.25–2.5T 7 (0.945); Delcy YES 28 (0.095); quake 11–13 YES 28.31 (0.109); Trump-out NO 0.33. Open MTM 68.38, realizable 61.45. No new resolution-source news since 13:00Z session.
+- Trades: none. pUSD $0.76, cash-blocked; no edge large enough to justify selling crypto sleeves (swap cost). Orders unchanged.
