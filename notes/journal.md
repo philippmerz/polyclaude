@@ -34643,3 +34643,11 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Hunt: MI/MT Senate turnout brackets — MT killed (~1pp), MI too close to call (~4.797–4.802M vs 4.8M edge); recheck after MI certification Mon 23 Nov 16:00 CET (see hunt_iteration.md).
 - Trades: none (pUSD ~$0.76).
 
+
+- 2026-11-22 18:54 CET event wake 62172d7d1aca (news: Delcy Rodríguez invites public to Museo del Clásico de los Campeones) on Venezuela-leader-end-2026: routine official activity, non-material; supervisor + 6 watchers up; no action.
+
+## 2026-11-22T18:00Z — Investor evening review (lean; usage 95.2%)
+- Health: supervisor 12447 (hb 1s) + 6 watchers up; no fix needed. Box suspends last 24h (supervisor log): ~7.6h night suspend ending 07:16Z, then ~77 min 10:11Z, ~53 min 12:04Z, ~49 min 14:25Z, ~59 min 15:27Z (guard respawn check 15:39Z), ~2h10m ending 17:49Z. Geoblock API: country NL, "blocked":true (3rd consecutive reading) → no trading.
+- Mark 17:57:49Z–17:58:04Z: bankroll.py 87.44 + WBTC 0.0009397 (carried) × Coinbase 60746.365 = 57.08 + HYPE 0.16988101 (carried) × @107 mid 63.1245 = 10.72 + HL USDC 0.70 → **whole account $155.95**; gas 3.89; trading $152.06 (−10.6% vs 170). vs 11-21 row: whole 154.36→155.95 (+1.0%), trading 150.45→152.06 (+1.1%) — BTC +1.3%, HYPE +4.1%, PM mid 68.38→68.58, realizable 61.45→61.71.
+- Positions (positions.py): Clarity over-58 NO 29 (0.96) / over-50 YES 29 (0.029); NDX-by-Dec-18 NO 14 (0.88); HLE YES 84.5 (0.08, resting SELL 20@0.25 untouched); ANT Dec-31 cap NO 2.0–2.25T 9 (0.895) & 2.25–2.5T 7 (0.955); Delcy YES 28 (0.095); quake 11–13 YES 28.31 (0.109); Trump-out NO 0.33. Open MTM 68.58, realizable 61.70. ANT resolution source unchanged (weekend; Fri close $88.91). News since 13:00Z: Delcy routine only. Non-material.
+- Trades: none (no-new-positions rule this run; geoblock blocked; pUSD $0.76). Orders unchanged.
