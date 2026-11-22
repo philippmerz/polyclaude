@@ -219,3 +219,10 @@ Validation step first: backtest on resolved BTC monthly-range events (Gamma hist
 ## 2026-11-22 08:00Z — capital-recycling ranker (from 11-21 self-critique) — KILLED
 - Test: sell HLE YES 84.5 sh (bid ~0.08, ~$6.7 net of spread) to fund ≥2.5T Anthropic NO (~0.93, fair ~0.98–0.99 → ~5–6pp). Gain ≈ 7 sh × 0.055 ≈ $0.39. Cost: giving up HLE YES at fair ~0.08–0.10 vs bid 0.08 (≈0 to −$0.8 EV) plus resting SELL 20@0.25 optionality and spread on both legs. Net ≈ zero or negative → no sale. Rule: only recycle when (edge_new − (fair_old − bid_old)) × size > ~$1. Nothing in the current book clears it; the Dec-31 NO ladder is already held.
 - No news-driven leads since 11-21 18:00Z (ANT closed Fri $88.91, nasdaq.com unchanged over the weekend).
+
+## 2026-11-22 13:00Z — post-election turnout/margin bracket markets (MI/MT Senate) — NO TRADE, watch for certification
+- Idea: Nov-3 midterm bracket markets (turnout, margin) still open/unresolved with thin, stale books; if the certified total is knowable from public counts, buy the winning bracket below 1.
+- Montana turnout: Alme 235,549 = 48.16% → total ≈489K → 450–500K bracket. Book bid 0.90 / ask 0.973, ~$47 liq. Fair ~0.98 → ~1pp, too thin. Killed.
+- Michigan turnout (michigan-senate-election-turnout; includes write-ins): MIRS 100% unofficial candidates 4,794,229 + civicAPI write-ins 3,609 (97% rptg) ≈ 4,797,838 → 4.6–4.8M, only ~2.2K under the 4.8M edge (tie → higher bracket). But exa/AP-style table (upd. Nov 16) shows candidates 4,798,089, which + write-ins = ~4.80M → 4.8–5.0M. Sources disagree by ~4K; mielections.us official page 504'd. Books: 4.6–4.8M bid 0.057/ask 0.967, 4.8–5.0M bid 0.03/ask 0.90 — mids ~0.51/0.47 look fair given ambiguity. No edge before certification.
+- Lead to recheck: Board of State Canvassers certifies Mon 23 Nov 2026 10:00 ET (16:00 CET). If certified total lands in 4.8–5.0M and its 0.90 ask is still up (or 4.6–4.8M at ≤0.95), that's a ~5–10pp pre-UMA buy. Needs cash (pUSD $0.76) → also a reason to fund an operating buffer.
+
