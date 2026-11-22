@@ -34618,3 +34618,20 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Mark 17:58:21Z–17:58:38Z: bankroll.py 87.00 + WBTC 0.0009397 × Coinbase 59976.115 = 56.36 + HYPE 0.16988101 × @107 mid 60.6505 = 10.30 + HL USDC 0.70 → **whole account $154.36**; gas 3.91; trading $150.45 (−11.5% vs 170). vs 11-20 row 152.14: +2.22 (BTC +1.5%, HYPE −0.6%, PM mid 64.30→68.38, realizable 57.29→61.45).
 - Positions (positions.py): Clarity over-58 NO 29 (0.96) / over-50 YES 29 (0.029); NDX-by-Dec-18 NO 14 (0.88); HLE YES 84.5 (0.08, resting SELL 20@0.25 untouched); ANT Dec-31 cap NO 2.0–2.25T 9 (0.88) & 2.25–2.5T 7 (0.945); Delcy YES 28 (0.095); quake 11–13 YES 28.31 (0.109); Trump-out NO 0.33. Open MTM 68.38, realizable 61.45. No new resolution-source news since 13:00Z session.
 - Trades: none. pUSD $0.76, cash-blocked; no edge large enough to justify selling crypto sleeves (swap cost). Orders unchanged.
+
+## 2026-11-21T18:45Z — event wake 63a033a8faee (news, Delcy)
+- Headline: Delcy Rodríguez as "presidenta" addresses university students at La Carlota, Caracas. Routine appearance, consistent with held Delcy YES 28 thesis; non-material. Supervisor + 6 watchers up. No action.
+
+## 2026-11-21T19:47Z — event wake 4250e5502c66 (news, Delcy)
+- Same story as 63a033a8faee (Instagram photo post: "Presidenta" Delcy Rodríguez meets 1,000 university students in Caracas). Supports held Delcy YES 28; non-material. Supervisor + 6 watchers up. No action.
+
+- 2026-11-22 08:19 CET news_watcher wake d2b2579bfe3b (Delcy Rodríguez as Presidenta opens baseball museum) on Delcy end-2026 market (held YES): consistent with thesis, non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-22 08:53 CET news wake d341745d44b4 (Kimi K3 2.8T run on 2x RTX 3090 + Optane, 3.11 tok/s) on Kimi HLE>=55% market: hobbyist inference story, no HLE score info; non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-22 09:03 CET news_watcher wake 829edb9661a9 (Univ. de Carabobo: Delcy Rodríguez orders unblocking of AI platforms in Venezuela) on Venezuela-leader-end-2026 market: non-material routine governance news, no leadership-change signal; supervisor + 6 watchers up; no action.
+
+## 2026-11-22T08:00Z — Investor operator session
+- Health: supervisor 12447 (hb 8s) + 6 watchers up; no errors needing a fix (disk-warning lines in heartbeat_watch.log are stale pre-restore). Geoblock API returned country NL but `"blocked":true` (NL was tradable in earlier sessions, but treat as suspect) — no orders placed regardless (pUSD ~$0.76).
+- Held (positions.py): Clarity over-58 NO 29 (0.96) / over-50 YES 29 (0.029); NDX-by-Dec-18 NO 14 (0.88); HLE YES 84.5 (0.085, resting SELL 20@0.25); ANT cap NO 2.0–2.25T 9 (0.895), 2.25–2.5T 7 (0.955); Delcy YES 28 (0.085); quake YES 28.31 (0.11); Trump-out NO 0.33. Open MTM $68.74, realizable $62.19. nasdaq.com ANT still last $88.91 (Fri close, market closed). News since 18:00Z (Delcy routine, Kimi hobbyist inference, CNN ANT debut, Forbes) non-material. Nothing near-certain to exit; nothing redeemable checked via positions (no new resolved rows).
+- Hunt: capital-recycling ranker (sell HLE YES to fund ≥2.5T NO) — killed, ~$0.4 gain, see hunt_iteration.md.
+- Trades: none.

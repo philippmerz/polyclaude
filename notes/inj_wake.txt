@@ -1,0 +1,1 @@
+FYI wake e2b1d7f7bdaf: TestingCatalog says Kimi K3.1 prepared for release after Arena testing (HLE>=55% market, held). No benchmark numbers yet; your call whether it changes the thesis.
