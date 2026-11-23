@@ -34668,3 +34668,9 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Health: box suspended ~5h (07:55Z–12:57Z, supervisor resume gap 17942s); supervisor 12447 (hb 10s after resume) + 6 watchers up; no fix needed. Geoblock API: country NL, "blocked":true (known frontend state).
 - Held (positions.py): unchanged; open MTM $68.25, realizable $60.75. No queued news since 07:55Z (box suspended). No near-certain exit at bid; resting HLE SELL 20@0.25 unchanged.
 - Hunt: skipped (light mode). Trades: none (pUSD ~$0.76).
+
+- 2026-11-23 13:59 CET news_watcher wake e7efdcf17c83 (Miranda govt: Presidenta Delcy Rodríguez hands baseball Walk of Fame to champions) on Venezuela-leader-end-2026 market: routine ceremonial coverage, non-material, supports incumbency. Supervisor + 6 watchers up. No action, no notify.
+- 2026-11-23 18:46 CET news_watcher wake 9c41ce7d5c15 (Maduro Guerra convokes communes/UBCH/PSUV bases to meet this afternoon) on Venezuela-leader-end-2026: routine PSUV party mobilization, no leadership-change signal, non-material. Supervisor + 6 watchers up. No action, no notify.
+- 2026-11-23 18:45 CET news wake a47ef3e1ab39 (NIST: UK AISI/CAISI preliminary assessment of Kimi K3 cyber capabilities) on Kimi-HLE >=55% (held YES 84.5, resting SELL 20@0.25): July 23 2026 cyber-eval report resurfaced, no HLE score; non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-23 19:04 CET evening review (light: Grok Bot weekly usage 98% vs ~88% pace, over pace, resets Tue 24 Nov 15:14 CET). Supervisor + 6 watchers up (heartbeat 650s). Geoblock NL (blocked:true = known frontend flag). No trades, no new positions. Whole account 157.19 (bankroll.py 87.49 + WBTC 57.87 + HYPE 11.13 + HL USDC 0.70); gas 4.01; trading 153.18 (-9.9% vs 170, up from 152.06). PM mid 68.28 / realizable 60.63. Ostium status unavailable in bankroll.py. Row appended to docs/performance.csv.
