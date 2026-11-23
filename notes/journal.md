@@ -34661,3 +34661,10 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Health: supervisor 12447 + 6 watchers up; no fix needed. Geoblock API: country NL, "blocked":true (known frontend state).
 - Held (positions.py): unchanged; open MTM $68.02, realizable $61.19. Queued news since 21:50 CET: no resolution-source change on held markets (Ark buying ANT shares, macro rout color). No near-certain exit at bid; resting HLE SELL 20@0.25 unchanged.
 - Hunt: skipped (light mode). Trades: none (pUSD ~$0.76).
+
+- 2026-11-23 08:56 CET news_watcher wake 4d49ec5e2bb0 (Delcy Rodríguez as President inaugurates sports Walk of Fame) on Venezuela-leader-end-2026: routine official activity, non-material (if anything confirms incumbency). Supervisor + 6 watchers up. No action.
+- 2026-11-23 08:56 CET news wake 1534f9e73086 (OrcaRouter: GLM-5.4 vs Kimi K3.1 Pro, open weights vs paid seat) on Kimi-HLE >=55% (held YES 84.5, resting SELL 20@0.25): pricing/licensing comparison of existing models, no new Moonshot HLE score; non-material; supervisor + 6 watchers up; no action.
+## 2026-11-23T13:00Z — Investor operator session (light mode until usage reset Tue 24 Nov 15:14)
+- Health: box suspended ~5h (07:55Z–12:57Z, supervisor resume gap 17942s); supervisor 12447 (hb 10s after resume) + 6 watchers up; no fix needed. Geoblock API: country NL, "blocked":true (known frontend state).
+- Held (positions.py): unchanged; open MTM $68.25, realizable $60.75. No queued news since 07:55Z (box suspended). No near-certain exit at bid; resting HLE SELL 20@0.25 unchanged.
+- Hunt: skipped (light mode). Trades: none (pUSD ~$0.76).
