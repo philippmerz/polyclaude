@@ -34688,3 +34688,19 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Held (positions.py): unchanged; open MTM $68.76, realizable $62.69. Queued news since 23 Nov 21:50 CET: Anthropic debuted (+17% day 1, ~-20% from $111.50 open over 2 days, sitting out Monday's rally) — supportive of held Dec-31 cap NO 2.0–2.25T (0.935) / 2.25–2.5T (0.969); Moonshot IPO/ARR and science-pivot color, no new HLE score; Delcy routine incumbent activity. No resolution-source change; no near-certain exit at bid; resting HLE SELL 20@0.25 unchanged.
 - Hunt: skipped (light mode). Trades: none.
 
+
+- 2026-11-24 10:31 CET news_watcher wake a02a913f98e1 (Alba Ciudad: Delcy Rodríguez closed Filven 2026, gave Premio Nacional de Historia) on held Venezuela-leader-end-2026 market: non-material, routine official duty consistent with thesis. Supervisor + 6 watchers up. No action.
+
+- 2026-11-24 12:02 CET news_watcher wake fd4564d9c49d (SCMP: US lawmakers investigate DoorDash use of Kimi K2.6) on Kimi HLE >=55% market: non-material (no benchmark/score info); supervisor + 6 watchers up; no action.
+- 2026-11-24 12:03 CET news_watcher wake 81588a011e75 (Delcy Rodríguez visits Comuna Gual y España, Caracas) on Venezuela-leader-end-2026: non-material routine presidential activity, consistent with thesis; supervisor + 6 watchers up; no action.
+
+- 2026-11-24 15:25 CET news_watcher wake 7e9383a6fa98 (Delcy Rodríguez speech on diverse thought vs social media) on Venezuela-leader-end-2026: non-material, she is acting as president; supervisor + 6 watchers up; no action.
+
+- 2026-11-24 16:14 CET news_watcher wake c67e523abf95 (The Block Campus: "Crypto Market Structure Basics" explainer) on held Clarity over-58 NO / over-50 YES pair: generic educational content, non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-24 16:14 CET news_watcher wake b5d1ef9c09d3 (La Radio del Sur: Maduro thanks supporters for 64th-birthday wishes) on Venezuela-leader-end-2026: non-material symbolic message, no change to who leads; supervisor + 6 watchers up; no action.
+
+## 2026-11-24 18:59 CET — evening review (usage reset passed 15:14; 2.2% used, on pace)
+- Health: supervisor 1534 (hb 5s) + 6 watchers up. Box up 2h42m at 18:59 CET (rebooted/resumed ~16:17 CET); system python lacks httpx, use .venv/bin/python for scripts. Geoblock API: country NL, blocked:true (known frontend state).
+- Held (positions.py 17:59Z): unchanged, no trades in last 24h. Open MTM $68.68, realizable $62.41. Moves: Anthropic NDX-by-Dec-18 NO mark 0.94->0.88 (thin book, avg-fill 0.813) — no Nasdaq announcement found; thesis (Fast Entry ref date Nov 30 -> effective Mon Dec 21) intact. Anthropic trading low $80s, below $83 IPO (~$1.5T cap) — supportive of Dec-31 cap NO 2.0–2.25T (0.930) / 2.25–2.5T (0.969). Kimi HLE YES 0.075, Delcy YES 0.10, Clarity pair, quake 11–13 YES 0.11, Trump-out NO: no resolution-source change found.
+- Mark 17:59:23Z–17:59:47Z: bankroll.py 87.33 + WBTC 0.0009397 (carried) × Coinbase 60054.995 = 56.43 + HYPE 0.16988101 (carried) × @107 mid 60.9475 = 10.35 + HL USDC 0.70 → **whole account $154.81**; gas 3.92; trading $150.89 (−11.2% vs 170). vs 11-23 row: whole 157.19→154.81 (−1.5%) — BTC −2.5%, HYPE −6.9%, PM mid 68.28→68.69, realizable 60.63→62.41.
+- Trades: none (pUSD $0.76). Row appended to docs/performance.csv.
