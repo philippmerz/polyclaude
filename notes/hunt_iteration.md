@@ -250,3 +250,7 @@ Next idea: build an operating cash buffer by selling legs whose bid is within ~1
 - Michigan turnout lead (11-22): resolved 4.6–4.8M. Closed.
 - Blocker unchanged: pUSD $0.76. If cash frees up, candidate = 1.0–1.25T YES ≤0.29 (needs high-effort decision; invalidation: filing restating share count, or ANT >$95 / <$75 sustained).
 
+
+## 2026-11-25 12:58Z — cross-event monotonicity sweep — KILLED
+- event_monotonicity_scan.py (vol24 ≥$1k, min 2pp): 879 multi-market events inspected (first 15 pages; coverage capped), 0 midpoint violations. No mechanical ladder arb in liquid events today. Next: widen to low-vol events only when funded (pUSD $0.76).
+

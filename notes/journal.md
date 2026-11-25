@@ -34717,3 +34717,13 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Hunt: Dec-31 cap ladder vol model → unfunded lead (1.0–1.25T YES ≤0.29); Clarity ladder monotonicity killed; MI turnout closed. See hunt_iteration.md.
 - Trades: none (pUSD $0.76).
 
+- 2026-11-25 11:05 CET news_watcher wake 5603fe444b14 (Delcy Rodríguez as president describes a domestic program, #EnVideo) on Venezuela-leader-end-2026: non-material, routine presidential activity consistent with thesis; supervisor + 6 watchers up; no action.
+- 2026-11-25 12:15 CET news wake c4294e18a5da (Yahoo Finance: Buy the dip? Why China's Kimi model is great news for Nvidia) on Kimi-HLE >=55% (held YES, resting SELL 20@0.25): stock-opinion piece, no new Moonshot HLE score or release; non-material; supervisor + 6 watchers up; no action.
+- 2026-11-25 13:01 CET news_watcher wake acd66693ef10 (Banca y Negocios: Delcy Rodríguez on "Venezuela Renace" economic plan) on Venezuela-leader-end-2026: non-material, routine presidential activity consistent with thesis; supervisor + 6 watchers up; no action.
+- 2026-11-25 13:01 CET news wake 899fc7b0a07c (GitHub Blog: Kimi K3 now available in GitHub Copilot) on Kimi-HLE >=55% (held YES, resting SELL 20@0.25): distribution/product availability of an existing model, no new Moonshot HLE score or release; non-material; supervisor + 6 watchers up; geoblock NL; no action.
+
+## 2026-11-25T12:58Z — Investor operator session
+- Health: supervisor 1534 + 6 watchers up; status showed heartbeat 3338s stale on first read (box-resume gap), fresh on recheck 13:58 CET; no fix needed. Geoblock NL (blocked:true, known flag).
+- Held: unchanged; open MTM $70.44, realizable $66.77. Clarity >58 NO mark 0.948 (from 0.963), no Senate-vote news. ANT not trading yet (pre-market); queued news 07:30–12:00Z = ANT below IPO price coverage (Barron's: could fall below $1T), Broadcom $1B IPO allocation, Claude Code staff to OpenAI — price color only, supportive of Dec-31 cap NO legs. Kimi K3 in GitHub Copilot: no HLE score. Delcy routine. No exits at bid near fair.
+- Hunt: monotonicity sweep, 0 violations (killed). Trades: none (pUSD $0.76).
+
