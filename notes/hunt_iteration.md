@@ -240,3 +240,13 @@ Next idea (research after the Tue reset): tighten news_watcher materiality filte
 ## 2026-11-24 evening
 Critique: third straight no-trade day; the −1.5% today was entirely crypto beta (BTC −2.5%, HYPE −7%), while the PM book edged up. The PM sleeve is ~$69 of idle-locked holds with $0.76 free cash, so "act on opportunity" is structurally impossible — the binding constraint is liquidity, not ideas. The NDX NO mark fall to 0.88 is book thinness, not news, but it shows how wide exits are on our small markets. Light mode last week was the right call at 98% usage; with the weekly budget fresh (2.2%), tomorrow's session should actually hunt.
 Next idea: build an operating cash buffer by selling legs whose bid is within ~1pp of fair (e.g. Dec-31 cap NO 2.25–2.5T at ~0.96–0.97, Clarity over-58 NO if bid ≥0.955) and recycle into one fresh mispricing per week; research first whether the Anthropic NDX question resolves on announcement date or effective date (if announcement in early Dec counts, the NO thesis is wrong and should be exited).
+
+## 2026-11-25 08:00Z — Anthropic Dec-31 cap ladder: bracket fair value vs realized vol — LEAD (unfunded), not traded
+- Inputs: ANT NOCP Tue 24 Nov $81.905 (range 75.61–83.49; closes 97.17/88.91/87.64/81.905), ~13.24B outstanding (424b) → cap ≈ $1.084T. Resolution = NOCP 31 Dec × outstanding (no options/RSUs).
+- Lognormal, 25 trading days. σ=90% (≈ realized since IPO): <750B 0.10, 750B–1T 0.29, 1–1.25T 0.31, 1.25–1.5T 0.18, 1.5–1.75T 0.08, 1.75–2T 0.03, ≥2T ~0.015 total. σ=60%: 750B–1T 0.31, 1–1.25T 0.44.
+- Book (YES bid/ask): <750B .097/.174, 750B–1T .15/.26, 1–1.25T .25/.29, 1.25–1.5T .11/.30, 1.5–1.75T .07/.14, 1.75–2T .02/.04, 2–2.25T .03/.07, 2.25–2.5T .014/.042, ≥2.5T .017/.087.
+- Read: market keeps ~0.36 on ≥1.25T, consistent with residual FD-share-count fear (~18B FD). On the outstanding-share rule, 1.0–1.25T YES at 0.29 is +1.5c (σ 90%) to +15c (σ 60%); ≥2.5T NO at 0.983 vs ~0.998. Edge is vol-model-dependent; robust part is only the far tail (1–3c).
+- Monotonicity/sum checks on the Clarity >N ladder (>50 YES ask .029 vs >68 YES bid .015; >60 ask .049 vs >62 bid .032): no executable arb after spread. Killed.
+- Michigan turnout lead (11-22): resolved 4.6–4.8M. Closed.
+- Blocker unchanged: pUSD $0.76. If cash frees up, candidate = 1.0–1.25T YES ≤0.29 (needs high-effort decision; invalidation: filing restating share count, or ANT >$95 / <$75 sustained).
+
