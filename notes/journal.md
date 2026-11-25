@@ -34727,3 +34727,12 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Held: unchanged; open MTM $70.44, realizable $66.77. Clarity >58 NO mark 0.948 (from 0.963), no Senate-vote news. ANT not trading yet (pre-market); queued news 07:30–12:00Z = ANT below IPO price coverage (Barron's: could fall below $1T), Broadcom $1B IPO allocation, Claude Code staff to OpenAI — price color only, supportive of Dec-31 cap NO legs. Kimi K3 in GitHub Copilot: no HLE score. Delcy routine. No exits at bid near fair.
 - Hunt: monotonicity sweep, 0 violations (killed). Trades: none (pUSD $0.76).
 
+- 2026-11-25 14:04 CET news_watcher wake 2fb2a4e4757d (Ministry of Economy: Delcy Rodríguez finalizes Shell service orders) on Venezuela-leader-end-2026: non-material duplicate of 52c4c5299581, routine presidential activity consistent with thesis; supervisor + 6 watchers up; no action.
+
+- 2026-11-25 18:54 CET: news_watcher wake d2f8b51501ed (Al Jazeera: Maduro turns 64 behind bars, son leads celebrations) on Delcy-leader-end-2026 market: non-material (Maduro still detained, no change to Rodríguez leadership). Supervisor + 6 watchers up. No action.
+
+## 2026-11-25 18:59 CET — evening review (sole operator; usage 7.7%, on pace)
+- Health: supervisor 1534 + 6 watchers up (hb 19s). Box up since ~13:38 CET (5h20); guard respawned supervisor at 13:08Z and 17:52Z (resume gaps; supervisor-log gap lines stop at 11-23, so no precise gap length) — no fix needed. Use .venv/bin/python for scripts. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (positions.py 17:58Z): unchanged, no trades in 24h. Open MTM $70.62, realizable $66.74. Clarity >58 NO 0.948, NDX NO 0.885 (thin, avg-fill 0.813), Kimi HLE YES 0.075, Dec-31 cap NO 2.0–2.25T 0.950 / 2.25–2.5T 0.972, Delcy YES 0.095, quake 11–13 YES 0.192 (from 0.11, entry 0.089), Clarity >50 YES 0.022. News today (Maduro 64th birthday detained, Delcy routine, Kimi K3 in Copilot) non-material.
+- Mark 17:58:30Z–17:58:50Z: bankroll.py 89.20 + WBTC 0.0009397 × Coinbase 59519.735 = 55.93 + HYPE 0.16988101 × @107 mid 59.7245 = 10.15 + HL USDC 0.70 → **whole account $155.98**; gas 3.90; trading $152.08 (−10.5% vs 170). vs 11-24 row: whole 154.81→155.98 (+0.8%) — BTC −0.9%, HYPE −2.0%, PM mid 68.69→70.62 (quake YES +, Clarity NO +), realizable 62.41→66.74.
+- Trades: none (pUSD $0.76; no cash, nothing near-fair enough to recycle that beats spread).

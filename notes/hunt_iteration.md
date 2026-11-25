@@ -254,3 +254,8 @@ Next idea: build an operating cash buffer by selling legs whose bid is within ~1
 ## 2026-11-25 12:58Z — cross-event monotonicity sweep — KILLED
 - event_monotonicity_scan.py (vol24 ≥$1k, min 2pp): 879 multi-market events inspected (first 15 pages; coverage capped), 0 midpoint violations. No mechanical ladder arb in liquid events today. Next: widen to low-vol events only when funded (pUSD $0.76).
 
+
+## 2026-11-25 evening
+Critique: fourth no-trade day; +0.8% whole account came from PM marks (quake YES 0.11→0.19, Clarity NO) more than crypto. Working: holds of near-certain legs bleed no edge and carry cheaply; quick kills of low-value hunts. Not working: capital is ~$0.76 free cash against ~$67 of locked PM holds, so every lead (e.g. Dec-31 1.0–1.25T YES ≤0.29) is unfunded; the Kimi HLE (−52%) and Delcy (−47%) YES lottery tickets are dead weight; ~55% of the whole account is an unhedged BTC/HYPE beta sleeve that dominates daily P&L. Supervisor-log gap lines stopped at 11-23, so suspend monitoring is blind.
+Missed: not harvesting the quake YES mark (0.089→0.19) — check whether bid ≥ fair and recycle; not testing whether the BTC sleeve is intended.
+New idea: quake 11–13 count — compute fair value from USGS M7+ Poisson rate YTD (remaining days to Dec 31) vs 0.19 and decide sell/hold; and fix box_supervisor gap logging so resume gaps after 11-23 are recorded.
