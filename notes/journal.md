@@ -34746,3 +34746,14 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Quake 11–13 YES checked vs resolution source (USGS): 2026 M7+ count = 13 already (last: M7.0 mww Nagqu 22 Oct; incl. Venezuela doublet 24 Jun 7.2+7.5). YES wins iff no further M7+ through 31 Dec 23:59 ET. Fair ≈ P0 Poisson(λ≈1.4–1.5) ≈ 0.22–0.25 → hold (bid 0.091 far below fair).
 - Trades: none (pUSD $0.76).
 
+\n- 2026-11-26T08:02:19.421Z news_watcher wake 6bd22a0c5678 (state media: Presidenta Delcy Rodríguez praises PDVSA strategic alliance) on Venezuela-leader-end-2026: non-material, consistent with thesis; supervisor + 6 watchers up; no action, no notify.\n
+- 2026-11-26 12:10 CET news_watcher wake ae6e3fab1dec (Noticias Barquisimeto: Presidenta (E) Delcy Rodríguez on controlling inflation) on Venezuela-leader-end-2026 market: routine statement, non-material; supervisor + 6 watchers up; no action, no notify.
+- 2026-11-26 12:20 CET news wake 9889652609f0 (Kimi K3.1 Pro closes in on US frontier models: real-world testing) on Kimi-HLE >=55% (held YES, resting SELL 20@0.25): review of existing model, no new Moonshot HLE score or release; non-material; supervisor + 6 watchers up; geoblock NL; no action.
+- 2026-11-26 12:52 CET news_watcher wake c17678786b8d (state media: Presidenta Delcy Rodríguez meets Economic Team) on Venezuela-leader-end-2026: routine, non-material, consistent with held YES thesis; supervisor + 6 watchers up; no action, no notify.
+
+## 2026-11-26 13:30 CET — protocol basket decision (Philipp t79u: implementation left to me)
+- Re-underwrote VVV/GEOD/AERO live (notes/protocol_research.md §7). **No trades, no WBTC trim.** Costs were not the blocker (Kyber/Across quotes <1%).
+- VVV $27.82 (+20% 7d, HTX/Hayes momentum): skip; armed review trigger ≤ $22 with monthly burn ≥ $0.9M.
+- GEOD $0.1795: wait for 2026-11-28 cliff (15.94M, 12.5M final team tranche ≈2.1% circ); then $5 if ≤ $0.20, Nov burns ≥ $0.70M, liquidity ≥ $250k.
+- AERO: killed for us — revenue only to ≥6-month locked sAERO NFTs; spot diluted; revenue shrinking.
+- GEOD circ supply resolved (~754M; CG methodology jump mid-Oct→Nov). Triggers in notes/watchlist_triggers.json (run `scripts/watchlist_monitor.py --hits-only`).

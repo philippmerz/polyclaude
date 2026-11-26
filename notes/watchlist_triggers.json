@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-10-06",
+  "updated": "2026-11-26",
   "comment": "Project-only crypto review triggers. Off-chain stocks and personal-brokerage monitoring were retired 2026-10-06. The previous mixed watchlist is retained in notes/longterm_watchlist_archive_2026-10-06.md and Git history. A price trigger requests fresh thesis, lawful route, exact instrument identity, net-cost and portfolio-risk review; it never authorizes an automatic entry. Project positions must fit the less-than-one-year horizon and January 2027 evaluation.",
   "triggers": [
     {
@@ -24,6 +24,28 @@
       "rationale": "Sep-30 evidence refresh: the $105 price gate is a review trigger, not an automatic buy. V4/Arc and Base stock launches already occurred. Require funded and executed recurring revenue-funded AAVE purchases with a disclosed cadence, plus a review of incident liabilities. April buyback pause is established, while August/September steward allowances for AAVE do not prove current recurring execution; do not assert that all present buybacks are zero without onchain verification. Arbitrum spot route is available through the hardened max-output/min-out gate, with a $20 round-trip quote loss of 0.612% before gas or funding.",
       "added": "2026-08-28",
       "updated": "2026-09-30"
+    },
+    {
+      "ticker": "GEOD",
+      "type": "crypto",
+      "coingecko_id": "geodnet",
+      "entry_max": 0.2,
+      "horizon": "1y",
+      "route": "polyclaude",
+      "rationale": "2026-11-26 protocol_research \u00a77: $5 starter on Polygon (Kyber route USDC->GEOD 0xAC0F66379A6d7801D7726d5a943356A172549Adb) ONLY after the 2026-11-28 Blockworks cliff (15.94M GEOD, 12.5M team) has passed, AND DefiLlama geodnet Nov-2026 holders revenue >= $0.70M, AND Polygon pool liquidity >= $250k, AND cost (gas+slippage) <= 3%. Not an auto-entry; re-underwrite at trigger.",
+      "added": "2026-11-26",
+      "updated": "2026-11-26"
+    },
+    {
+      "ticker": "VVV",
+      "type": "crypto",
+      "coingecko_id": "venice-token",
+      "entry_max": 22.0,
+      "horizon": "1y",
+      "route": "polyclaude",
+      "rationale": "2026-11-26 protocol_research \u00a77: $6 starter on Base (VVV 0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf, Kyber/Aerodrome) if price <= $22 (~-20% vs 27.8 decision mark) with DefiLlama 'venice' monthly burn >= $0.9M and no move routing value to equity. Skipped at 27.8 on 2026-11-26: +20% 7d listing/Hayes momentum, token captures ~1%/yr of mcap in burns. Not an auto-entry.",
+      "added": "2026-11-26",
+      "updated": "2026-11-26"
     }
   ]
 }

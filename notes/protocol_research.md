@@ -141,7 +141,7 @@ Prices/mcap: CoinGecko API 2026-11-26 ~12:30 Amsterdam. Revenue: DefiLlama API s
 
 ---
 
-## 4. Ranked shortlist + proposed basket (research only — NOT traded)
+## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
 
 Account ~$156 (2026-11-25 review): PM ~$70, WBTC ~$56, Arbitrum ETH ~$13, HL HYPE ~$10, HL USDC $0.70. Free cash ~$1.
 
@@ -174,6 +174,42 @@ Account ~$156 (2026-11-25 review): PM ~$70, WBTC ~$56, Arbitrum ETH ~$13, HL HYP
 - Sources to reuse: DefiLlama API (`/summary/fees/<slug>?dataType=dailyRevenue`), CoinGecko API, Castle Labs buybacks,
   routers.vantage.sh (OpenRouter share), DexScreener (liquidity), project dashboards (Aero Dune, Railscan, Helium snapshot).
 
+## 7. Decision 2026-11-26 ~13:30 Amsterdam (fresh-eyes re-underwrite; Philipp t79u: "elite… not a random gambler")
+
+**Result: bought nothing today. No WBTC trim. Two conditional entries armed in `notes/watchlist_triggers.json`; AERO killed.**
+
+Live check (CoinGecko ~13:20, Kyber/Across quotes ~13:25):
+- VVV $27.82 (+10.7% 24h, +20.4% 7d); GEOD $0.1795 (−8.9% 7d, −26% 30d); AERO $0.402 (−40.5% 30d); BTC $60.6k; HYPE $60.5.
+- Execution is NOT the constraint: Kyber quotes $5 USDC→GEOD (Polygon) out $4.985 + $0.012 gas (~0.5%); $6 USDC→VVV (Base)
+  ~0.0% impact + $0.006 gas; WBTC→USDC (Arbitrum) ~0.0% + $0.02; Across Arbitrum→Polygon $0.007, →Base $0.004 (min deposit $0.50).
+- Burns (DefiLlama monthly, Nov MTD to 26th): Venice $1.08M (Oct $1.06M); GEODNET $0.76M (Oct $0.94M).
+
+Open items resolved:
+- **GEOD supply:** CoinGecko's circulating figure jumped from ~460M (mid-Oct) to ~745M (1 Nov) → methodology catch-up, not a
+  surprise mint: Blockworks shows mining 100%, investors 100%, team 95% unlocked. ~754M circ / 1B max. Remaining: **15.94M
+  cliff on 2026-11-28** (12.5M = last team tranche, ≈2.1% of circ, ≈$2.9M vs ~$0.44M daily volume), then ~3.44M/month
+  (ecosystem/public sale/vendors). Ravel's lower October circ was the stale CG number.
+- **AERO staking:** sAERO is an ERC-721 lock of 6 months–4 years (perpetual = 4y countdown to exit); no early unstake; NFT
+  transferable but illiquid. Plain spot AERO receives **none** of the exchange revenue and is diluted by LP emissions.
+
+Per name:
+- **VVV — skip at $27.8, armed at ≤ $22.** Best product in the set, but at this entry I'd be buying a listing/"Hayes $40"
+  momentum leg, not the Dec-2025 setup (4x ARR, unknown). Burns are ~1%/yr of mcap; the rest is narrative + DIEM demand. It
+  swings ±20% within days (high $30.47 on 11-25, low $24.54 same day), so patience is cheap. Trigger needs monthly burn ≥ $0.9M.
+- **GEOD — wait 2 days, then $5 if ≤ $0.20.** Most Venice-like fundamentals (non-crypto paying customers, near-fully vested), but
+  buying 48h before the final team cliff is avoidable. Also burns dipped in Nov — needs Nov ≥ $0.70M to keep the thesis.
+- **AERO — KILL (for us).** Revenue accrues only to locked sAERO (≥6-month illiquid lock); spot is diluted; revenue base
+  shrinking ($111M Q4-24 → $25.8M Q3-26). Revisit only if a liquid sAERO wrapper appears AND Q4-26 revenue ≥ $21M.
+- **HYPE:** unchanged core; still first in line if the core is rebalanced.
+
+Honest read: none of today's names is an asymmetric Venice-2025 setup; they are good businesses at roughly fair prices. The
+asymmetric hunt continues (§5 cadence; relative-strength-in-a-bear scan; privacy apps with paying users).
+
+Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, the evening review must add
+`balanceOf` × CoinGecko price for VVV (Base `0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf`) and GEOD (Polygon
+`0xAC0F66379A6d7801D7726d5a943356A172549Adb`) on the crypto-sleeve address, same as the WBTC/HYPE lines.
+
 ## 6. Log
+- 2026-11-26 13:30: §7 decision — no buys; VVV ≤$22 and GEOD post-11-28 ≤$0.20 triggers armed; AERO killed (lock).
 - 2026-11-26 pass 1: universe of ~35, 4 picks, 6 watch, rest killed. Next: reconcile GEOD circulating supply; check sAERO
   liquidity/lock terms; Venice OpenRouter share trend; NEAR Intents fee capture; look for a privacy-app token with paying users.
