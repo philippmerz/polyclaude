@@ -53,7 +53,7 @@ Prices/mcap: CoinGecko API 2026-11-26 ~12:30 Amsterdam. Revenue: DefiLlama API s
 | DePIN | **GEODNET (GEOD)** | **PICK (small)** | Non-crypto B2B customers (RTK positioning), ~8% burn yield; see §3 |
 | DEX | **Aero (AERO)** | **PICK (speculative)** | Base's dominant venue at ATL, 100% revenue to stakers; revenue trend is the risk; see §3 |
 | Privacy | Zcash (ZEC) | WATCH | Real private-money use (4.9M ZEC / ~29% shielded) but no cash flow; $12.4B after −77% from ATH; buy only on product catalyst |
-| Privacy | Railgun (RAIL) | WATCH | Real product (private DeFi, $153M gross/30d, $4.1M/yr fees), fees to stakers ~10% yield, but revenue flat for 12 months; $92M mcap ≈ 22x |
+| Privacy | Railgun (RAIL) | WATCH (deep-dived §3.5, 2026-11-26) | Best paying-user privacy product on EVM (record 13.9k tx/month, stablecoins 77% of flows, no incentives) at $91M/$1.52, but only ~45% of fees reach stakers (USDC/USDT fees undistributed), 40M mintable overhang, live RICO default suit. Triggers in §3.5 |
 | Consumer payments | ether.fi (ETHFI) | WATCH | Cash card is real (~$243M spend MTD Nov [DefiLlama-derived]); total rev ~$3.8M/30d vs $434M mcap (~9.5x); buyback tiny ($2.3M cum.) and recycled to stakers |
 | Lending | Morpho (MORPHO) | WATCH | Excellent product (Coinbase Borrow ~$1.6–1.7B outstanding) but fee switch OFF → token captures $0; FDV $1.6B. Re-open if switch votes |
 | Launchpad | Pump.fun (PUMP) | WATCH/KILL | Cheapest on holders-rev (~$219M/yr buyback vs $930M mcap) but revenue −37% m/m, supply +29.5% YTD despite $407M buybacks, product is extractive gambling; spot only on Solana |
@@ -139,6 +139,49 @@ Prices/mcap: CoinGecko API 2026-11-26 ~12:30 Amsterdam. Revenue: DefiLlama API s
 - **Why now:** ATL ($0.37 on 2026-11-21, −53% from post-merger top), fresh Coinbase distribution.
 - **Invalidation:** Q4-26 revenue < $18M or Base DEX share < 45% for a month.
 
+
+### 3.5 Railgun (RAIL) — the real private-dollar rail; token is a leaky claim (WATCH, armed triggers)
+Data 2026-11-26 ~14:00 Amsterdam: CoinGecko, DefiLlama API (fees/holdersRevenue/TVL), DexScreener, Alea Research (4 Nov 2026,
+on-chain), CourtListener docket 1:26-cv-00179.
+- **User value (product pull, not incentives):** zk-SNARK shielded pool on Ethereum (+Arbitrum/BSC/Polygon, Base approved):
+  private balances, transfers, swaps and, since wallet SDK 11.2.0 (30 Sep), private DeFi positions (Aave/Morpho) through
+  single-use EIP-7702 accounts; wallets adopted it within a week (weekly unshields to the old shared relay 612 → 21, single-use
+  accounts 0 → 559 [Alea]). Users pay 0.25% to shield and 0.25% to unshield, and there are **no liquidity-mining or points
+  incentives**. Usage: record 13,918 private tx in Sep 2026 (+65% y/y), Jan–Sep 94.7k (+58%); Sep stablecoin flows $117.5M
+  (+94% y/y), **stablecoins = 77% of flow value** (payroll/treasury/trader privacy, i.e. private dollars). TVL $97M (ETH $93M).
+  Distribution: Railway, Terminal, Anon (mobile); Ambire via EF's Kohaku toolkit is next (demoed at Devcon 3 Nov, no ship date;
+  the Kohaku repo lists Railgun as "under maintenance" while Privacy Pools/Tornado show as available).
+- **Revenue:** DefiLlama fees $4.13M trailing 1y; monthly 2026 ($k) Jan 353, Feb 331, Mar 319, Apr 382, May 331, Jun 294, Jul
+  329, Aug 305, Sep 386, Oct 345, **Nov 356 MTD (26 d) → ~$410k pace, best month of 2026**. In $ terms fees are flat-to-down vs
+  2025 (Aug–Oct 2025 $462–566k) because ETH fell; in transactions and stablecoin terms usage clearly grew. The token
+  price did not follow: RAIL −38% 30d / −50% 1y while fees rose (CryptoBrief: fees +63% w/w the week RAIL fell 24%).
+- **Value accrual (the weak link):** every fee goes to an on-chain treasury; every 2 weeks 4.2% (2% before the 22 Jul vote) of
+  the treasury's **WETH, DAI and RAIL** becomes claimable by stakers. **USDC/USDT are outside the schedule** [Alea], and those are
+  now ~77% of flows → only part of the fee intake reaches stakers. DefiLlama holders revenue $1.76M trailing 1y, $176–225k/month
+  since July (~$2.4M/yr run rate ≈ 45–55% of fees). Oct 21 payout: 35.0 WETH + 15.7k DAI + 88.8k RAIL. No buyback or burn.
+- **Supply:** 100M max, 60M minted; the DAO can mint the other 40M by vote (it minted 2.5M to the treasury with the July vote).
+  Staked 42.5M (70.9%). There are no VC unlock cliffs, but the mint headroom is a governance-controlled overhang (+67% potential).
+- **Valuation:** $1.52 → mcap $91.3M, $152M at the 100M cap. ~21x trailing fees (35x at cap); **~38x holder cash** (run rate).
+  Staker cash yield ≈ $2.4M / $64M staked ≈ 3.7%, plus ~2.3M RAIL/yr of recycled treasury RAIL (≈5% of staked; a transfer from
+  non-stakers, not income). Comparables: HYPE ~15x circulating holder revenue, GEOD ~10x burns, ZEC $12.4B with zero cash flow.
+  So RAIL is cheap as a privacy asset (≈1/130 of ZEC) but not cheap as a cash claim.
+- **Risks:** (1) **Legal:** Kim v. Railgun DAO (D.D.C., RICO + negligence, terrorism-judgment creditors of DPRK; FBI tied $60M+
+  of Harmony-hack ETH to Railgun in Jan 2023). Clerk's default entered 10 Apr 2026; default-judgment motion sought $193.5M /
+  124,923 ETH; **order on it entered 19 Nov (ECF 23, content not public to me), notice of voluntary dismissal 24 Nov (ECF 25;
+  scope unknown, maybe DCG only)**. Staking = voting = "DAO member" exposure on Ooki-style theories. (2) Compliance-first
+  competitors with no token (0xbow Privacy Pools) ship first in Kohaku, and Ethereum-native privacy could commoditise the pool.
+  (3) PPOI circuit flaw disclosed Oct 2026 (zkNoX; fixed). (4) Token liquidity: ~$6M DEX liquidity on Ethereum mainnet
+  (Uniswap v2/v3 RAIL/WETH $1.07M/$3.95M, Sushi $0.89M), ~$118k/day volume.
+- **Why now / why not:** the product inflection (private stablecoins + private DeFi positions + wallet distribution) is real and
+  the token is −37% since the 27 Oct Alea piece while usage set records. That is the Venice-2025 shape. It is not yet the
+  Venice-2025 *token*: the token gets less than half the fees, can be diluted by vote, and carries an open RICO docket.
+- **Verdict: WATCH, not a conviction pick. No entry today.** Arm a $5 entry (Ethereum mainnet Uniswap v3 RAIL/WETH via Kyber;
+  Across Arbitrum→Ethereum; gas ~0.15 gwei ≈ cents; hold unstaked at first) only when **(a)** a passed protocol request adds
+  USDC/USDT to the staker distribution or adds a buyback (holder cash ~2x → ~20x), **or (b)** the docket shows default judgment
+  denied or the whole case dismissed, **plus (c)** monthly fees ≥ $400k for two months (Nov pace qualifies if it holds).
+  Price guide: ≤ $1.60 with (a) or (b). **Kill** if a default judgment is granted against the DAO/treasury, a mint beyond 2.5M/yr
+  passes, or monthly fees < $280k for two months.
+
 ---
 
 ## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
@@ -213,3 +256,8 @@ Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, t
 - 2026-11-26 13:30: §7 decision — no buys; VVV ≤$22 and GEOD post-11-28 ≤$0.20 triggers armed; AERO killed (lock).
 - 2026-11-26 pass 1: universe of ~35, 4 picks, 6 watch, rest killed. Next: reconcile GEOD circulating supply; check sAERO
   liquidity/lock terms; Venice OpenRouter share trend; NEAR Intents fee capture; look for a privacy-app token with paying users.
+- 2026-11-26 14:15: §3.5 Railgun deep dive → **WATCH** (no buy). Product pull is real (record tx, 77% stablecoin flows, no
+  incentives, Nov fees ~$410k pace) at $91M / $1.52, but stakers get ~45–55% of fees (USDC/USDT undistributed), ~38x holder cash,
+  40M mintable, open RICO docket (ECF 23 order 19 Nov, ECF 25 dismissal notice 24 Nov, contents unread). Trigger: stablecoin fees
+  added to distribution OR buyback, or suit dismissed/denied, + fees ≥$400k x2 months → $5 at ≤$1.60. Next: read ECF 23/25;
+  NEAR Intents fee capture.
