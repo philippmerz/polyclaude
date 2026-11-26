@@ -34767,3 +34767,13 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Protocol: Railgun (RAIL) deep dive → WATCH; trigger $5 ≤$1.60 on fee-capture fix or lawsuit cleared + fees ≥$400k/mo ×2 (protocol_research.md §3.5).
 - Trades: none (pUSD $0.76).
 
+- 2026-11-26 15:34 CET news wake adea3b667121 (Delcy Rodríguez praises organized youth/local economy) on Venezuela-leader-end-2026 (held YES): routine state PR, non-material; supervisor + 6 watchers up; no action.
+- 2026-11-26 15:33 CET news_watcher wake 9c1fa68b89e7 (WSJ: Moonshot AI restructures for IPO) on Kimi HLE >=55% market: corporate news, no HLE score/model release info — non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-26 16:37 CET news wake 6813407666a4 (#EnVideo: Delcy Rodríguez on organized youth/local economy; repeat of adea3b667121) on Venezuela-leader-end-2026 (held YES): routine state PR, non-material; supervisor + 6 watchers up; no action.
+
+## 2026-11-26 18:57 CET — evening review (sole operator; usage 15.7%, under pace)
+- Health: **supervisor + all 6 watchers were down** at review start (heartbeat 3730s stale). Box had restarted ~17:53 CET (uptime 1:01 at 18:54) and nothing respawned the supervisor on boot — ~1h watcher gap (≈16:52Z–17:55Z). Fixed: `box_ctl.sh ensure` → supervisor 32072 + 6 watchers up, hb 3s. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (positions.py 17:55Z): unchanged, no trades in 24h. Open MTM $69.21, realizable $62.41. Clarity >58 NO 0.955, NDX NO 0.885 (thin, avg-fill 0.813), HLE YES 0.075 (resting SELL 20@0.25), Dec-31 cap NO 2.0–2.25T 0.967 / 2.25–2.5T 0.976, Delcy YES 0.085, quake 11–13 YES 0.143, Clarity >50 YES 0.018, Trump-out NO 0.977.
+- News on held: ANT trading high $70s/low $80s, below IPO price after founder sales (X news 11-25/26) — supports Dec-31 cap NO legs (2.0–2.5T far above); no Nasdaq-100 fast-entry news; Clarity — no new Senate action. Delcy/Kimi wakes today non-material (above).
+- Mark 17:55:26Z–17:56:04Z: bankroll.py 87.97 + WBTC 0.0009397 × Coinbase 60437.345 = 56.79 + HYPE 0.16988101 × @107 mid 60.364 = 10.25 + HL USDC 0.70 → **whole account $155.71**; gas 3.95; trading $151.76 (−10.7% vs 170). vs 11-25 row 155.98 → −0.2% (BTC +1.5%, HYPE +1.1%, PM mid 70.62→69.21: quake YES 0.19→0.14).
+- Trades: none (pUSD $0.76). Sweden PM lead not funded: recycling a 0.97 NO leg to buy ~0.80 at ~0.85 fair ≈ +$0.30 EV — not worth a high-effort decision.
