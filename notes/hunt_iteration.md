@@ -259,3 +259,11 @@ Next idea: build an operating cash buffer by selling legs whose bid is within ~1
 Critique: fourth no-trade day; +0.8% whole account came from PM marks (quake YES 0.11→0.19, Clarity NO) more than crypto. Working: holds of near-certain legs bleed no edge and carry cheaply; quick kills of low-value hunts. Not working: capital is ~$0.76 free cash against ~$67 of locked PM holds, so every lead (e.g. Dec-31 1.0–1.25T YES ≤0.29) is unfunded; the Kimi HLE (−52%) and Delcy (−47%) YES lottery tickets are dead weight; ~55% of the whole account is an unhedged BTC/HYPE beta sleeve that dominates daily P&L. Supervisor-log gap lines stopped at 11-23, so suspend monitoring is blind.
 Missed: not harvesting the quake YES mark (0.089→0.19) — check whether bid ≥ fair and recycle; not testing whether the BTC sleeve is intended.
 New idea: quake 11–13 count — compute fair value from USGS M7+ Poisson rate YTD (remaining days to Dec 31) vs 0.19 and decide sell/hold; and fix box_supervisor gap logging so resume gaps after 11-23 are recorded.
+
+## 2026-11-26 08:00Z — M7+ earthquake count ladder vs Poisson — LEAD (unfunded, thin), not traded
+- USGS FDSN (minmag 7, 2026): 13 events YTD to 26 Nov; none M7+ in Nov (largest 6.8 Lospalos 21 Nov). Remaining window ~36.2 days to 31 Dec 23:59 ET. Rate 13/330d ≈ 14.4/yr (long-run ~15) → λ≈1.43–1.49.
+- Fair (Poisson): 11–13 ≈ 0.23, 14–16 ≈ 0.71, 17–19 ≈ 0.065, 20+ ≈ 0.002. Clustering (aftershock M7 doublets) fattens 0 and ≥4 tails → 11–13 fair maybe 0.25.
+- Book: 11–13 YES .091/.193; 14–16 .74/.80; 17–19 .07/.13; 20+ .002/.007. Market mid 0.14 on 11–13 underprices "no more M7 this year".
+- Candidate: 11–13 YES at ≤0.20 (edge ~3–5c; ask 30.4@0.193, 12@0.227). Alt: 14–16 NO at ≤0.26 (~3c). Revision risk: a 6.9 upgraded to 7.0 hurts; 7.0 Nagqu/7.1 Kota Belud downgrade helps (still ≤13). Invalidation: any new M7+ (instant ~0 for YES).
+- Blocker: pUSD $0.76; held quake YES 28.31 already on this thesis. Not handed back (below 4c-robust threshold for an unfunded add).
+

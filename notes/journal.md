@@ -34736,3 +34736,13 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Held (positions.py 17:58Z): unchanged, no trades in 24h. Open MTM $70.62, realizable $66.74. Clarity >58 NO 0.948, NDX NO 0.885 (thin, avg-fill 0.813), Kimi HLE YES 0.075, Dec-31 cap NO 2.0–2.25T 0.950 / 2.25–2.5T 0.972, Delcy YES 0.095, quake 11–13 YES 0.192 (from 0.11, entry 0.089), Clarity >50 YES 0.022. News today (Maduro 64th birthday detained, Delcy routine, Kimi K3 in Copilot) non-material.
 - Mark 17:58:30Z–17:58:50Z: bankroll.py 89.20 + WBTC 0.0009397 × Coinbase 59519.735 = 55.93 + HYPE 0.16988101 × @107 mid 59.7245 = 10.15 + HL USDC 0.70 → **whole account $155.98**; gas 3.90; trading $152.08 (−10.5% vs 170). vs 11-24 row: whole 154.81→155.98 (+0.8%) — BTC −0.9%, HYPE −2.0%, PM mid 68.69→70.62 (quake YES +, Clarity NO +), realizable 62.41→66.74.
 - Trades: none (pUSD $0.76; no cash, nothing near-fair enough to recycle that beats spread).
+- 2026-11-25 19:10 CET news wake effdb5a4f7f7 (AWS blog: Deploying Kimi K3 on SageMaker HyperPod/EKS) on Kimi-HLE >=55% (held YES, resting SELL 20@0.25): deployment how-to for existing model, no new Moonshot HLE score or release; non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-25 19:37 CET news_watcher wake b95cfde2bf80 (El Universal: Delcy Rodríguez says women benefit from Venezuela Renace plan) on Venezuela-leader-end-2026: non-material PR; supervisor + 6 watchers up; no action.
+
+## 2026-11-26T08:00Z — Investor operator session (full; usage on pace)
+- Health: supervisor 1534 + 6 watchers up; first status read heartbeat 2239s stale (box-resume gap; up 6h18), fresh (5s) on recheck — no fix needed. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (scripts/positions.py): unchanged; open MTM $69.02, realizable $62.27. Clarity >58 NO 0.948, NDX NO 0.885 (thin), HLE YES 0.075 (resting SELL 20@0.25), Dec-31 cap NO 2.0–2.25T 0.966 / 2.25–2.5T 0.976, Delcy YES 0.085, quake 11–13 YES 0.142, Clarity >50 YES 0.019, Trump-out NO 0.976. Queued news to 18:52Z 11-25 (ANT below IPO price — Forbes/NYT; Delcy routine; Kimi K3 SageMaker; Kansas Senate flip — not held) non-material / supportive of cap NO legs. No exit with bid near fair.
+- Quake 11–13 YES checked vs resolution source (USGS): 2026 M7+ count = 13 already (last: M7.0 mww Nagqu 22 Oct; incl. Venezuela doublet 24 Jun 7.2+7.5). YES wins iff no further M7+ through 31 Dec 23:59 ET. Fair ≈ P0 Poisson(λ≈1.4–1.5) ≈ 0.22–0.25 → hold (bid 0.091 far below fair).
+- Trades: none (pUSD $0.76).
+
