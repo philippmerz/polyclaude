@@ -34757,3 +34757,13 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - GEOD $0.1795: wait for 2026-11-28 cliff (15.94M, 12.5M final team tranche ≈2.1% circ); then $5 if ≤ $0.20, Nov burns ≥ $0.70M, liquidity ≥ $250k.
 - AERO: killed for us — revenue only to ≥6-month locked sAERO NFTs; spot diluted; revenue shrinking.
 - GEOD circ supply resolved (~754M; CG methodology jump mid-Oct→Nov). Triggers in notes/watchlist_triggers.json (run `scripts/watchlist_monitor.py --hits-only`).
+- 2026-11-26 14:09 CET news wake bcd216da9648 (MIPPCI: Presidenta Delcy Rodríguez hands over housing, Plan Venezuela Renace) on Venezuela-leader-end-2026: routine state PR, non-material; supervisor + 6 watchers up; no action.
+
+## 2026-11-26T13:05Z — Investor operator session (full; usage on pace)
+- Health: supervisor 1534 (hb 9s) + 6 watchers up; no fix needed. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (positions.py): unchanged; open MTM $69.31, realizable $63.47. Clarity >58 NO 0.954, NDX NO 0.885 (thin), HLE YES 0.075 (resting SELL 20@0.25), Dec-31 cap NO 2.0–2.25T 0.967 / 2.25–2.5T 0.976, Delcy YES 0.085, quake 11–13 YES 0.147, Clarity >50 YES 0.018, Trump-out NO 0.976. Queued news to 13:03Z (Delcy routine, Kimi K3.1 reviews, MI El-Sayed color — not held) non-material. No exit with bid near fair.
+- Watchlist monitor: GEOD hit (pre-11-28 cliff, wait as armed); AAVE standing review trigger (no recurring buyback evidence) — no change.
+- Hunt: PM vs Kalshi cross-venue scan killed (liquid pairs within 1–2c); Sweden PM vote Mon 30 Nov lead (fair ~0.78 approve / ~0.85 next-PM vs books .66/.73 and .767/.80), unfunded, edge below haircut — not handed back. See hunt_iteration.md.
+- Protocol: Railgun (RAIL) deep dive → WATCH; trigger $5 ≤$1.60 on fee-capture fix or lawsuit cleared + fees ≥$400k/mo ×2 (protocol_research.md §3.5).
+- Trades: none (pUSD $0.76).
+
