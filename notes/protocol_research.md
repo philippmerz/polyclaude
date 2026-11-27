@@ -224,6 +224,13 @@ Cointelegraph/FinScans (12–13 Nov exits).
 
 ---
 
+### 3.7 NEAR (NEAR Intents) — real cross-chain product, token capture too small vs issuance (KILL for now, 2026-11-27)
+- Product: NEAR Intents is a solver-based cross-chain swap rail used by wallets/frontends; DefiLlama volume $4.29B/30d, $1.18B/7d — real usage, fee-paying, not incentive-farmed.
+- Value to token: since 2026-02-23 Intents revenue buys NEAR on market (not burned; discretionary, governance can redirect). Captured revenue ~$1.66M/30d (Oct $2.19M, Nov MTD $1.39M); buyback Q4-to-date $3.57M (Q3 $3.07M) → ~$15–20M/yr.
+- Supply: issuance 2.5%/yr (since Oct 2025) ≈ 33M NEAR ≈ $100M/yr at $3.13; HSP-029 ramp to 1.6% only from Feb 2027 and still needs validator adoption. Buyback ≈ 1/5–1/6 of issuance → net dilutive.
+- Valuation: mcap $4.11B (CoinGecko 27 Nov) → ~200–250x holder cash. Revenue trend down from Oct.
+- Verdict: **KILL (for now)**. Great product, priced as an L1. Re-open if buyback ≥ ~$8M/month (≈ issuance at 1.6%) or mcap ≤ $1.5B with Intents volume ≥ $4B/30d.
+
 ## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
 
 Account ~$156 (2026-11-25 review): PM ~$70, WBTC ~$56, Arbitrum ETH ~$13, HL HYPE ~$10, HL USDC $0.70. Free cash ~$1.
@@ -302,3 +309,4 @@ Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, t
   added to distribution OR buyback, or suit dismissed/denied, + fees ≥$400k x2 months → $5 at ≤$1.60. Next: read ECF 23/25;
   NEAR Intents fee capture.
 - 2026-11-27 09:40: §3.6 Maple (SYRUP) deep dive → **WATCH** (no buy). Real two-sided credit product, ~6x revenue at $87M, but TVL −35% since Sep, Bitquery related-party-loan exposé, founder/COO exits, token gets only ~25% buyback (~36x holder cash). Trigger: TVL ≥$1.6B flat 4w + rev ≥$1.1M/mo ×2 + holder-capture or related-party fix → $5 ≤$0.08. Next: NEAR Intents fee capture; JUP (22x holder cash, 50% buyback) as next lender/aggregator comp.
+- 2026-11-27 13:20: §3.7 NEAR Intents → **KILL (for now)**: $4.3B/30d real volume but ~$1.7M/30d captured, buyback ~1/5 of 2.5% issuance, ~200x holder cash at $4.1B. Next: JUP (50% buyback, ~22x holder cash) at $0.252 / $838M.

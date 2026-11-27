@@ -34791,3 +34791,19 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - **Hunt (new niche): mention markets** — P(word) = P(event) × P(word|event). Jensen GTC DC (Dec 1) words all 0.06–0.24 because Huang (reinstated 23 Nov) lost the keynote slot to Ian Buck and has House interviews that day → book ≈ P(keynote) 0.24 vs my ~0.20; conditional pairs (Blackwell YES .19 + SI NO .77 = .96) EV ≤1c; Salesforce call books 40c wide. **KILLED.** (hunt_iteration.md)
 - **Protocol: Maple Finance (SYRUP)** $0.0745, mcap $87M (−57% 30d, −75% 1y). Real two-sided over-collateralised credit (~6x trailing revenue $14.8M) but TVL $2.81B→$1.84B since Sep, syrupUSDC deposits $617M, Bitquery related-party-loan exposé (70% of book to Maple-run wallets at ~2.7% in April), co-founder/COO exits; token gets only ~25% buyback (~36x holder cash). **WATCH, not a conviction pick**; trigger in protocol_research.md §3.6 + watchlist_triggers.json (price alarm $0.05; fundamental entry ≤$0.08).
 - Trades: **none** (no order placed, no bridge; `scripts/across_bridge.py` untouched and uncommitted).
+
+- 2026-11-27 09:07 CET: news_watcher wake 9b9cde1d3120 (La Radio del Sur: Delcy Rodríguez opens III Intellectual Property meeting in Caracas) on Delcy Venezuela leader market — routine official act, non-material, no thesis change; supervisor + 6 watchers up; no trade.
+
+- 2026-11-27 09:43 CET news_watcher wake 83d3eaf9b321 (Banca y Negocios: Delcy says Venezuela patent/trademark registrations +50%) on Delcy Venezuela leader market: non-material (routine govt statement, no leadership signal). Supervisor + 6 watchers up. No action.
+
+- 2026-11-27 13:12 CET news wake c1c3b4b38f82 (CNN en Español analysis: one month after María Corina Machado return, political board changed, Delcy too) on Venezuela-leader-end-2026 (held YES): analysis piece, no discrete leadership event; market flat YES 0.085 (bid 0.08/ask 0.09); non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-27 13:22 CET news_watcher wake ae5e1139b628 (SCMP: US lawmakers probe DoorDash use of Kimi K2.6) on Kimi HLE >=55%: non-material (regulatory, no HLE/benchmark info). Supervisor + 6 watchers up. No action.
+
+## 2026-11-27T13:00Z — Investor operator session
+- Health: boot_ensure no-op; supervisor 163139 (hb 5s) + 6 watchers up. Geoblock API country NL, blocked:true (known frontend flag).
+- Held (positions.py): unchanged; open MTM $69.89, realizable $62.87; pUSD ~$0.76. ANT premarket $85.85 (+3.7%, back above $83 IPO) ≈ $1.12T on 13.108B shares — Dec-31 cap NO legs 2.0–2.25T (0.969) / 2.25–2.5T (0.982) need ANT ≥ ~$153 to lose; hold to resolution (bid ≈ fair, no edge in selling). Lock-up expiry starts 15 Dec (supply overhang, supports NO legs). Nasdaq-100 NO 0.89 thin, no fast-entry news. Queued news since 08:00Z non-material (Delcy routine acts, Anthropic IPO commentary, Messi, MI/MT/KS Senate color). No exit with bid near fair; resting HLE SELL 20@0.25 unchanged.
+- Watchlist monitor: GEOD $0.1888 hit (still pre-11-28 cliff, wait as armed); AAVE standing review (no change).
+- Hunt: ANT listed options (~100% IV) as oracle for PM "Above IPO price at end of first month" (Mon 30 Nov close ≥ $83): fair Up ≈ 0.64 vs book .35/.67 → no taker edge, **KILLED** (hunt_iteration.md).
+- Protocol: NEAR Intents §3.7 → KILL for now (buyback ≈ 1/5 of issuance, ~200x holder cash).
+- Trades: none.
