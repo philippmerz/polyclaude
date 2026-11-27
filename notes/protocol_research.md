@@ -182,6 +182,46 @@ on-chain), CourtListener docket 1:26-cv-00179.
   Price guide: ≤ $1.60 with (a) or (b). **Kill** if a default judgment is granted against the DAO/treasury, a mint beyond 2.5M/yr
   passes, or monthly fees < $280k for two months.
 
+### 3.6 Maple Finance (SYRUP) — on-chain credit at −75% 1y; cheap on revenue, broken on trust (WATCH, armed triggers)
+Data 2026-11-27 ~09:30 Amsterdam: CoinGecko, DefiLlama API (revenue/holdersRevenue/TVL), DexScreener, Bitquery investigation
+(syrupUSDC loans), OnChain Benchmark (redemptions to 15 Nov), Alea Q3-2026 benchmark, Maple transparency page (Network Firm, 24 Nov),
+Cointelegraph/FinScans (12–13 Nov exits).
+- **User value (real, but concentrated):** syrupUSDC/syrupUSDT = permissionless deposits lent over-collateralised (BTC/ETH/XRP)
+  to trading firms and prime brokers (Bitquery traces cash to FalconX, Galaxy, an exchange reserve). Depositors earn ~5% (Q3
+  4.96%, ~1pp over T-bills); borrowers pay ~5.9–6.2%. This is genuine demand from both sides — no points farming needed for
+  borrowers — but the deposit side was dominated by a few allocators (Sky's Spark/Grove/Obex held 63% of syrupUSDC at Jun 30).
+- **Organic vs incentive:** deposits partly rode DeFi integrations (Aave/Morpho/Pendle loops, Drips points earlier). The test is
+  happening now: TVL $2.81B (20 Sep) → **$1.84B (27 Nov)**; syrupUSDC net redemptions $177.5M in 30d to 15 Nov (−16.7% tokens);
+  transparency page shows syrupUSDC deposits **$617M** (24 Nov) vs $1.01B at Sep 30. Sky/Spark exited.
+- **Trust problem (the real reason for −57% 30d):** Bitquery (Nov): on 7 Apr **70% of syrup loans ($1.75B) were owed by six
+  Maple-run wallets at ~2.7%** vs ~7% for trading firms, tagged "AMM liquidity / T-bills / intercompany"; coverage dipped to 75.6%
+  of loans on 1 Mar; cost to depositors $4–18M of foregone interest. Now $93M at 1.6% (a third of syrupUSDT's book). Co-founder/
+  exec chair Joe Flanagan and COO Ryan O'Shea quit over a strategy rift with CEO Sid Powell (12 Nov; O'Shea effective today 27 Nov);
+  Powell is pivoting to fintech receivables / mortgage-backed loans (more credit risk, less transparency).
+- **Revenue:** DefiLlama revenue ($k/month) Oct-25 1,298 · Jan 1,150 · Apr 1,322 · May 799 · Sep 1,625 · Oct 1,556 · Nov 1,176 MTD
+  (≈$1.3M full-month pace). Trailing 1y $14.8M. Management fee raised Aug (8.33% → 15% syrupUSDC) — revenue held up by taking a
+  bigger cut from shrinking deposits. Forward run-rate with deposits −35–60% from peak: ~$9–12M/yr.
+- **Value accrual:** token holders get only the buyback (≈25% of revenue → stSYRUP). DefiLlama holders revenue: $3.0M trailing 1y,
+  Jul–Nov $103–325k/month (~$2.4M/yr run rate). Maple Inc. (the company) keeps the rest; SYRUP is not equity.
+- **Supply:** 1.268B total / 1.167B circ (92%); FDV $94M — little cliff overhang. Ongoing staking emissions (historically ~5%/yr
+  to stSYRUP **[unverified current rate]**) roughly offset the buyback.
+- **Valuation:** $0.0745 → mcap $87M. **~6x trailing revenue, ~9x forward run-rate, but ~36x holder cash** (~$2.4M). Comps:
+  JUP ~$823M mcap / $38M holders rev ≈ 22x; PENDLE ~$215M / $8.4M ≈ 25x; HYPE ~15x; RAIL ~38x. So SYRUP is cheap only if you
+  believe the business, not the token, gets valued — and the token has no claim on the business beyond a discretionary buyback.
+- **Liquidity/route:** Ethereum Uniswap SYRUP/ETH ~$0.98M liquidity, $171k/24h; Base Aerodrome ~$16k. A $5 buy is trivial
+  (Arbitrum→Ethereum via Across, cents of gas).
+- **Risks:** (1) run dynamics — callable one-day loans (~1.2x Obex's balance in Oct) cover redemptions today, but a further leg
+  down shrinks revenue and the buyback mechanically; (2) related-party lending and governance (founder exit, no chairman named);
+  (3) pivot into opaque fintech/mortgage credit = real default risk, which is what killed Maple v1 in 2022 (Orthogonal);
+  (4) emissions vs buyback; (5) competition: Morpho/Aave institutional vaults and tokenised T-bill products at similar yield.
+- **Why now / why not:** it is the "good product, token −75%" shape, and on revenue it is the cheapest lender on-chain. But
+  unlike Venice-2025 the product metrics are **deteriorating**, the drop has a specific governance cause, and the token's claim
+  is thin. Falling knife until deposits stop leaving.
+- **Verdict: WATCH (not a conviction pick). No entry.** Review trigger (all of): (a) DefiLlama TVL ≥ $1.6B and flat-or-up for
+  4 consecutive weeks; (b) monthly revenue ≥ $1.1M for Dec and Jan; (c) a governance change that raises holder capture (buyback
+  ≥ 50% of revenue, or emissions cut) **or** an independent attestation that related-party loans are wound down (< 5% of book).
+  Then $5 at ≤ $0.08 on Ethereum Uniswap. **Kill** if TVL < $1.2B, any loan impairment/default or depositor loss, or Powell exits.
+
 ---
 
 ## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
@@ -261,3 +301,4 @@ Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, t
   40M mintable, open RICO docket (ECF 23 order 19 Nov, ECF 25 dismissal notice 24 Nov, contents unread). Trigger: stablecoin fees
   added to distribution OR buyback, or suit dismissed/denied, + fees ≥$400k x2 months → $5 at ≤$1.60. Next: read ECF 23/25;
   NEAR Intents fee capture.
+- 2026-11-27 09:40: §3.6 Maple (SYRUP) deep dive → **WATCH** (no buy). Real two-sided credit product, ~6x revenue at $87M, but TVL −35% since Sep, Bitquery related-party-loan exposé, founder/COO exits, token gets only ~25% buyback (~36x holder cash). Trigger: TVL ≥$1.6B flat 4w + rev ≥$1.1M/mo ×2 + holder-capture or related-party fix → $5 ≤$0.08. Next: NEAR Intents fee capture; JUP (22x holder cash, 50% buyback) as next lender/aggregator comp.
