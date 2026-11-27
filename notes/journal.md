@@ -34807,3 +34807,11 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Hunt: ANT listed options (~100% IV) as oracle for PM "Above IPO price at end of first month" (Mon 30 Nov close ≥ $83): fair Up ≈ 0.64 vs book .35/.67 → no taker edge, **KILLED** (hunt_iteration.md).
 - Protocol: NEAR Intents §3.7 → KILL for now (buyback ≈ 1/5 of issuance, ~200x holder cash).
 - Trades: none.
+
+## 2026-11-27 19:05 CET — evening review (sole operator; usage 19.5%, under pace)
+- Health: boot_ensure no-op; supervisor 163139 (hb 3s) + 6 watchers up. Box suspends today: 13:08–13:11Z (183s), ~13:12–14:28Z (77 min), ~14:39–18:03Z (3.4 h) — watchers blind ~4.5 h of the afternoon; the routine fire woke the box. telegram_listener DNS errors during suspends only. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (positions.py 18:03Z): unchanged, no trades in 24h. Open MTM $70.03, realizable $63.16. Clarity >58 NO 0.968, NDX NO 0.900 (thin), HLE YES 0.075 (resting SELL 20@0.25; bid 0.07/ask 0.08), Dec-31 cap NO 2.0–2.25T 0.969 / 2.25–2.5T 0.982, Delcy YES 0.085, quake 11–13 YES 0.149, Clarity >50 YES 0.018, Trump-out NO 0.980.
+- Resolution-source checks: USGS 2026 M7+ count still 13 (last M7.0 Nagqu 22 Oct) → quake 11–13 YES fair ≈ P0 Poisson(λ≈1.35–1.4, 34 d) ≈ 0.25 vs bid 0.062 → hold. ANT +10% to ~$92 intraday (X news 17:43Z) ≈ $1.2T — Dec-31 cap NO legs (2.0–2.5T) still need ~$153+, hold. Kimi K4 reported delayed to 2027 (X news 11-26) and official board K3.1 Pro 46.44 < 55 → HLE YES fair ≈ 0.03–0.05 vs bid 0.07; selling 45 sh into 0.07/0.05 bids nets ≈ +$1 EV — below the effort bar, keep the resting 0.25 sell. No Clarity Senate action (Senate in Thanksgiving recess). Delcy/Kimi wakes today non-material (above).
+- Mark 18:03:39Z–18:04:18Z: bankroll.py 88.63 + WBTC 0.0009397 × Coinbase 59754.76 = 56.15 + HYPE 0.16988101 × @107 mid 63.7575 = 10.83 + HL USDC 0.70 → **whole account $156.31**; gas 3.98; trading $152.33 (−10.4% vs 170). vs 11-26 row 155.71 → +0.4% (HYPE +5.6%, PM mid 69.21→70.03; BTC −1.1%).
+- Trades: none (pUSD $0.76).
+
