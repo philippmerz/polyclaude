@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "comment": "Project-only crypto review triggers. Off-chain stocks and personal-brokerage monitoring were retired 2026-10-06. The previous mixed watchlist is retained in notes/longterm_watchlist_archive_2026-10-06.md and Git history. A price trigger requests fresh thesis, lawful route, exact instrument identity, net-cost and portfolio-risk review; it never authorizes an automatic entry. Project positions must fit the less-than-one-year horizon and January 2027 evaluation.",
   "triggers": [
     {
@@ -32,7 +32,7 @@
       "entry_max": 0.2,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "2026-11-26 protocol_research \u00a77: $5 starter on Polygon (Kyber route USDC->GEOD 0xAC0F66379A6d7801D7726d5a943356A172549Adb) ONLY after the 2026-11-28 Blockworks cliff (15.94M GEOD, 12.5M team) has passed, AND DefiLlama geodnet Nov-2026 holders revenue >= $0.70M, AND Polygon pool liquidity >= $250k, AND cost (gas+slippage) <= 3%. Not an auto-entry; re-underwrite at trigger.",
+      "rationale": "2026-11-26 protocol_research §7: $5 starter on Polygon (Kyber route USDC->GEOD 0xAC0F66379A6d7801D7726d5a943356A172549Adb) ONLY after the 2026-11-28 Blockworks cliff (15.94M GEOD, 12.5M team) has passed, AND DefiLlama geodnet Nov-2026 holders revenue >= $0.70M, AND Polygon pool liquidity >= $250k, AND cost (gas+slippage) <= 3%. Not an auto-entry; re-underwrite at trigger.",
       "added": "2026-11-26",
       "updated": "2026-11-26"
     },
@@ -43,7 +43,7 @@
       "entry_max": 22.0,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "2026-11-26 protocol_research \u00a77: $6 starter on Base (VVV 0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf, Kyber/Aerodrome) if price <= $22 (~-20% vs 27.8 decision mark) with DefiLlama 'venice' monthly burn >= $0.9M and no move routing value to equity. Skipped at 27.8 on 2026-11-26: +20% 7d listing/Hayes momentum, token captures ~1%/yr of mcap in burns. Not an auto-entry.",
+      "rationale": "2026-11-26 protocol_research §7: $6 starter on Base (VVV 0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf, Kyber/Aerodrome) if price <= $22 (~-20% vs 27.8 decision mark) with DefiLlama 'venice' monthly burn >= $0.9M and no move routing value to equity. Skipped at 27.8 on 2026-11-26: +20% 7d listing/Hayes momentum, token captures ~1%/yr of mcap in burns. Not an auto-entry.",
       "added": "2026-11-26",
       "updated": "2026-11-26"
     },
@@ -54,9 +54,20 @@
       "entry_max": 0.05,
       "horizon": "1y",
       "route": "polyclaude",
-      "rationale": "2026-11-27 protocol_research \u00a73.6: REVIEW trigger, not an automatic buy. entry_max 0.05 is only a capitulation price alarm (spot 0.0745 on 11-27, so 0.08 would fire every session); the real trigger is fundamental, checked at the weekly review. Entry price if conditions met: <= $0.08. Only $5 on Ethereum Uniswap SYRUP/ETH if ALL: (a) DefiLlama maple TVL >= $1.6B and flat-or-up 4 consecutive weeks (was $1.84B on 11-27, falling from $2.81B Sep); (b) DefiLlama monthly revenue >= $1.1M for Dec-2026 and Jan-2027; (c) holder-capture upgrade (buyback >= 50% of revenue or emissions cut) OR independent attestation related-party (Maple-run wallet) loans < 5% of book. Kill: TVL < $1.2B, any loan impairment/depositor loss, or CEO Powell exit.",
+      "rationale": "2026-11-27 protocol_research §3.6: REVIEW trigger, not an automatic buy. entry_max 0.05 is only a capitulation price alarm (spot 0.0745 on 11-27, so 0.08 would fire every session); the real trigger is fundamental, checked at the weekly review. Entry price if conditions met: <= $0.08. Only $5 on Ethereum Uniswap SYRUP/ETH if ALL: (a) DefiLlama maple TVL >= $1.6B and flat-or-up 4 consecutive weeks (was $1.84B on 11-27, falling from $2.81B Sep); (b) DefiLlama monthly revenue >= $1.1M for Dec-2026 and Jan-2027; (c) holder-capture upgrade (buyback >= 50% of revenue or emissions cut) OR independent attestation related-party (Maple-run wallet) loans < 5% of book. Kill: TVL < $1.2B, any loan impairment/depositor loss, or CEO Powell exit.",
       "added": "2026-11-27",
       "updated": "2026-11-27"
+    },
+    {
+      "ticker": "PENDLE",
+      "type": "crypto",
+      "coingecko_id": "pendle",
+      "entry_max": 0.8,
+      "horizon": "1y",
+      "route": "polyclaude",
+      "rationale": "2026-11-28 protocol_research §3.8: REVIEW trigger, not an automatic buy. Spot $1.17 (mcap $204M, ~31x trailing fees, ~47x holder rev). Real product (yield trading, $94.8B cum. volume) and a clean sPENDLE model (buybacks > emissions, inflation ~0.2%), but TVL $792M (-92% from peak, 91% maturing by Dec 17) and fees ~$0.5M/month. Entry <= $0.80 (~20x holder rev) ONLY IF TVL stabilises >= $1.0B for 4 weeks AND monthly fees >= $0.9M (Dec-2026 DefiLlama). Kill: TVL < $500M or buybacks < $100k/epoch.",
+      "added": "2026-11-28",
+      "updated": "2026-11-28"
     }
   ]
 }

@@ -231,6 +231,14 @@ Cointelegraph/FinScans (12–13 Nov exits).
 - Valuation: mcap $4.11B (CoinGecko 27 Nov) → ~200–250x holder cash. Revenue trend down from Oct.
 - Verdict: **KILL (for now)**. Great product, priced as an L1. Re-open if buyback ≥ ~$8M/month (≈ issuance at 1.6%) or mcap ≤ $1.5B with Intents volume ≥ $4B/30d.
 
+### 3.8 Pendle (PENDLE) — real yield-trading product, token model fixed, but too small and shrinking for the price (WATCH, 2026-11-28)
+- Product: Pendle V2 splits yield-bearing assets into PT/YT; $94.8B cumulative volume, $792M TVL (DefiLlama 28 Nov), 82% RWA/treasury-style dollar markets (AUSD, reUSD, T-bill wrappers). Boros (rate derivatives) collateral only $4.8M → not yet a second leg. Genuine users, but TVL is -92% from the $13.4B Sep-2025 peak and -27% in 30d; ~91% of TVL matures by 17 Dec, so Dec TVL could drop again unless rolled.
+- Value accrual: sPENDLE replaced vePENDLE (Jan 2026): ~80% of retained fees buy PENDLE on market (bi-weekly; last epoch 110,966 PENDLE / $153K from $219K revenue) and go to stakers (not burned). Emissions cut 71–92% (~0.2%/yr inflation); buybacks ~4x emissions YTD (~$5M cum.). This is the cleanest token design among candidates reviewed.
+- Valuation: $1.17, mcap $204M, FDV $329M (circ 174M of 281.5M, so 38% still to emit/unlock-ish). DefiLlama fees $565k/30d (~$6.8M annualised; peak Apr 2026 $1.75M/month), holder revenue ~$385k/30d → ~47x holder revenue, ~31x fees. Buyback yield ~2%/yr. Cheaper than NEAR (~200x) but not cheap; HYPE ~15x, GEOD ~10x burns.
+- Why now / catalyst: Fed futures price a 99% hike Dec 9 and a rising path → higher fixed-rate demand could revive PT volume; but fee base is currently shrinking, and the hike pushes down yield-token appetite on RWA collateral.
+- Risks: RWA-dominated TVL (issuer/credit risk, e.g. reUSD), maturities cliff, buyback-to-stakers re-sold (14d exit), price -38% 30d momentum.
+- Verdict: **WATCH, not a pick.** Trigger in watchlist_triggers.json: <= $0.80 only if TVL >= $1.0B for 4 weeks and monthly fees >= $0.9M; kill if TVL < $500M or buybacks < $100k/epoch.
+
 ## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
 
 Account ~$156 (2026-11-25 review): PM ~$70, WBTC ~$56, Arbitrum ETH ~$13, HL HYPE ~$10, HL USDC $0.70. Free cash ~$1.
@@ -310,3 +318,4 @@ Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, t
   NEAR Intents fee capture.
 - 2026-11-27 09:40: §3.6 Maple (SYRUP) deep dive → **WATCH** (no buy). Real two-sided credit product, ~6x revenue at $87M, but TVL −35% since Sep, Bitquery related-party-loan exposé, founder/COO exits, token gets only ~25% buyback (~36x holder cash). Trigger: TVL ≥$1.6B flat 4w + rev ≥$1.1M/mo ×2 + holder-capture or related-party fix → $5 ≤$0.08. Next: NEAR Intents fee capture; JUP (22x holder cash, 50% buyback) as next lender/aggregator comp.
 - 2026-11-27 13:20: §3.7 NEAR Intents → **KILL (for now)**: $4.3B/30d real volume but ~$1.7M/30d captured, buyback ~1/5 of 2.5% issuance, ~200x holder cash at $4.1B. Next: JUP (50% buyback, ~22x holder cash) at $0.252 / $838M.
+- 2026-11-28 09:30: §3.8 Pendle deep dive -> **WATCH** (47x holder rev, TVL -92% from peak, clean sPENDLE model). GEOD post-cliff re-review: see journal 2026-11-28T08:00Z (unlock not yet on-chain; Nov burns on track ~$0.72M; conditions NOT met yet).
