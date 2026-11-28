@@ -34843,3 +34843,13 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Hunt: Spotify Wrapped 2026 ranking markets vs kworb Wayback deltas → Drake #2 .80 consistent with a ~15–20% Drake haircut seen in 2024/2025 → **KILLED** (hunt_iteration.md).
 - Protocol: Jupiter (JUP) §3.9 → WATCH, trigger ≤$0.18 added to watchlist_triggers.json.
 - Trades: none. No real lead.
+
+- 2026-11-28 15:33 CET news_watcher wake 568ec5005876 (TalCual: Delcy drops visa for Panamanians to boost tourism) on Delcy Venezuela leader market: non-material (routine governance, supports status quo); supervisor and all watchers up; no action.
+- 2026-11-28 15:41 CET news_watcher wake 3b8b92cb8b0f (GitHub changelog: Kimi K3 available in Copilot) on Kimi HLE >=55% (held YES, resting SELL 20@0.25): old 6 Aug 2026 changelog resurfaced (K3 is being retired from Copilot 14 Dec); no new model or HLE score, resolution board unchanged — non-material. Supervisor + 6 watchers up. No action.
+- 2026-11-28 18:58 CET news_watcher wake 292d903c2aa7 (Maduro Guerra interview: 'legal battle for the truth') on Delcy Venezuela leader market (held YES): non-material, no leadership-change signal; supervisor + all watchers up; no action.
+
+## 2026-11-28T18:00Z — Evening review (Philipp Merz / operator)
+- Health: supervisor 163139 (hb 2s) + 6 watchers up; box suspend 14:56Z→17:57Z (gap 10879s ≈3 h), supervisor respawned by resting_watch guard at 14:56Z, nothing broken. Geoblock API: country NL, blocked:true (known frontend flag; no order placed). Usage 22.9% vs expected 59.3% → under pace (notes/usage_pace.md, untracked).
+- Held (positions.py, 18:00Z): open cost $76.85, MTM $70.03, realizable $61.24. Clarity>58 NO .953 (29), NDX NO .90 (14, thin), HLE YES .075 (84.5; resting SELL 20@0.25), Dec-31 ANT cap NO .969/.982, Delcy YES .085, quake 11–13 YES .164 mid (USGS M7+ 2026 count still 13 at 18:00Z; fair ≈ .26 → hold), Clarity>50 YES .018, Trump-out NO .984. News since 13Z: only Maduro Guerra interview (non-material). No exit with bid near fair.
+- Whole account (live 17:58Z): bankroll.py 88.33 + Arbitrum WBTC 0.0009397 × Coinbase BTC 59341.605 = 55.77 + HL HYPE 0.16988101 × @107 mid 62.0905 = 10.55 + HL USDC 0.70 = 155.35. Gas 3.57+0.15+0.15 = 3.87 → trading 151.48 (−10.9% vs 170). PM mid 70.03 / realizable 61.24 indicative. vs 27 Nov row 156.31: −0.96.
+- Hunt: none new beyond M7+ ladder lead (unfunded). Protocol: Morpho §3.10 → KILL for now. Trades: none (pUSD $0.76). No real lead.
