@@ -239,6 +239,13 @@ Cointelegraph/FinScans (12–13 Nov exits).
 - Risks: RWA-dominated TVL (issuer/credit risk, e.g. reUSD), maturities cliff, buyback-to-stakers re-sold (14d exit), price -38% 30d momentum.
 - Verdict: **WATCH, not a pick.** Trigger in watchlist_triggers.json: <= $0.80 only if TVL >= $1.0B for 4 weeks and monthly fees >= $0.9M; kill if TVL < $500M or buybacks < $100k/epoch.
 
+### 3.9 Jupiter (JUP) — Solana's default router, clean overhang now, fairly priced (WATCH, 2026-11-28)
+- Product: Solana's default swap router (62% of Solana aggregator volume, $11.9B/30d of $19.3B; DFlow 22.5% is the rising challenger, OKX 7.6%, Titan 4.4%), plus perps (JLP), Lend, DCA/limit, JupUSD, prediction front-end. Used because routing/UX is best and it is embedded in wallets — not incentive farming. Weak spot: share erosion to DFlow (order-flow model) and dependence on Solana retail/memecoin volume.
+- Value accrual: 50% of on-chain revenue → Litterbox Trust, programmatic JUP buys (≈134M JUP bought/burned since Feb 2025); no equity entity, no dividends to insiders (docs.jup.ag transparency). Feb-2026 "Net-Zero Emissions" vote paused team emissions and postponed Jupuary; last scheduled unlock was Mercurial cliff 25 Feb 2026 → no scheduled unlocks 2026–27. Overhang remains discretionary: circ 3.32B of 6.86B total (team-held tokens can be re-released by vote).
+- Numbers (DefiLlama/CoinGecko 28 Nov): revenue $7.1M/30d, $86M/1y; monthly revenue $5.2–9.0M through 2026 (peak $15.8M Oct 2025); holders revenue $4.2M/30d (~$50M/yr). Price $0.241, mcap $800M, FDV $1.65B, −4% 1y, ATH $2.00. → ~16x holder cash on mcap (33x on FDV); buyback yield ~6%. Comps: HYPE ~15x with growth, GEOD ~10x, PENDLE ~47x, Maple ~36x.
+- Why now: none specific — revenue flat-to-down, share slipping; it is a fair price for a mature, real business, not a mispricing.
+- Verdict: **WATCH, not a pick.** Review trigger ≤ $0.18 (~12x holder cash) only if aggregator share ≥ 55% and holder revenue ≥ $4M/month; kill if share < 45% or a vote re-opens team emissions.
+
 ## 4. Ranked shortlist + proposed basket (pass-1 proposal; superseded by §7 decision 2026-11-26)
 
 Account ~$156 (2026-11-25 review): PM ~$70, WBTC ~$56, Arbitrum ETH ~$13, HL HYPE ~$10, HL USDC $0.70. Free cash ~$1.
@@ -319,3 +326,4 @@ Accounting on entry: bankroll.py does not read VVV/GEOD. Until it is extended, t
 - 2026-11-27 09:40: §3.6 Maple (SYRUP) deep dive → **WATCH** (no buy). Real two-sided credit product, ~6x revenue at $87M, but TVL −35% since Sep, Bitquery related-party-loan exposé, founder/COO exits, token gets only ~25% buyback (~36x holder cash). Trigger: TVL ≥$1.6B flat 4w + rev ≥$1.1M/mo ×2 + holder-capture or related-party fix → $5 ≤$0.08. Next: NEAR Intents fee capture; JUP (22x holder cash, 50% buyback) as next lender/aggregator comp.
 - 2026-11-27 13:20: §3.7 NEAR Intents → **KILL (for now)**: $4.3B/30d real volume but ~$1.7M/30d captured, buyback ~1/5 of 2.5% issuance, ~200x holder cash at $4.1B. Next: JUP (50% buyback, ~22x holder cash) at $0.252 / $838M.
 - 2026-11-28 09:30: §3.8 Pendle deep dive -> **WATCH** (47x holder rev, TVL -92% from peak, clean sPENDLE model). GEOD post-cliff re-review: see journal 2026-11-28T08:00Z (unlock not yet on-chain; Nov burns on track ~$0.72M; conditions NOT met yet).
+- 2026-11-28 13:15: §3.9 Jupiter (JUP) → **WATCH** (no buy): real default router (62% Solana agg share, DFlow 22.5% rising), 50% on-chain rev → buybacks, no scheduled unlocks after net-zero-emissions vote, but ~16x holder cash at $800M with flat revenue = fair, not cheap. Trigger ≤$0.18 + share ≥55% + holder rev ≥$4M/mo. Next: DFlow (no token?) / ZEC catalyst check / Morpho fee-switch status.

@@ -68,6 +68,17 @@
       "rationale": "2026-11-28 protocol_research §3.8: REVIEW trigger, not an automatic buy. Spot $1.17 (mcap $204M, ~31x trailing fees, ~47x holder rev). Real product (yield trading, $94.8B cum. volume) and a clean sPENDLE model (buybacks > emissions, inflation ~0.2%), but TVL $792M (-92% from peak, 91% maturing by Dec 17) and fees ~$0.5M/month. Entry <= $0.80 (~20x holder rev) ONLY IF TVL stabilises >= $1.0B for 4 weeks AND monthly fees >= $0.9M (Dec-2026 DefiLlama). Kill: TVL < $500M or buybacks < $100k/epoch.",
       "added": "2026-11-28",
       "updated": "2026-11-28"
+    },
+    {
+      "ticker": "JUP",
+      "type": "crypto",
+      "coingecko_id": "jupiter-exchange-solana",
+      "entry_max": 0.18,
+      "horizon": "1y",
+      "route": "polyclaude",
+      "rationale": "2026-11-28 protocol_research §3.9: REVIEW trigger, not an automatic buy. Spot $0.241 (mcap $800M, ~16x holder rev $4.2M/30d). Entry <= $0.18 (~12x) ONLY IF Solana aggregator share >= 55% (DefiLlama) AND holder revenue >= $4M/month. Kill: share < 45% or team emissions re-opened.",
+      "added": "2026-11-28",
+      "updated": "2026-11-28"
     }
   ]
 }

@@ -34829,3 +34829,17 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Protocol: Pendle (PENDLE) §3.8 → WATCH: 47x holder rev, TVL -92% from peak ($792M, 91% maturing by 17 Dec), clean sPENDLE buyback model; trigger ≤$0.80 + TVL≥$1.0B + fees≥$0.9M/mo added.
 - Trades: **none** (pUSD $0.76; no funded candidate with ≥4c edge). No real lead.
 
+- 2026-11-28 09:07 CET news wake 6756e62426c3 (explainx.ai: GLM-5.5 / Kimi K4 delays, Reuters vs verified) on Kimi-HLE >=55% (held YES 0.075, resting SELL 20@0.25): repeat of known K4-delay-to-2027 news (already priced; fair .03–.05); non-material; supervisor + watchers checked; no action.
+- 2026-11-28 12:55 CET news_watcher wake 9fcc71e9807f (Infobae: Delcy announces unmanned-systems command in FANB) on Delcy Venezuela leader market (held YES): routine govt/military announcement, non-material; supervisor + 6 watchers up; no action.
+
+- 2026-11-28 12:55 CET news_watcher wake f3a6c38f3e91 (Bloomberg: Moonshot AI funding at $35B valuation) on Kimi HLE >=55% market: non-material (funding, no benchmark info). Supervisor + 6 watchers up. No action.
+
+- 2026-11-28 13:59 CET news_watcher wake 3cff97e712d4 (Delcy leads Military Aviation Day events as president) on Delcy Venezuela leader market: non-material, consistent with thesis; supervisor + watchers up; no action.
+
+## 2026-11-28T13:00Z — Investor operator session
+- Health: supervisor 163139 (hb 1s) + 6 watchers up; usage 19.5% (under pace, reset Tue 1 Dec 15:14) → full session. Geoblock API: country NL, blocked:true (known frontend flag).
+- Held (positions.py): open cost $76.85, MTM $73.90, realizable $68.25; unchanged, no trades. USGS 2026 M7+ count still 13 (latest M6.5–6.8 only: Vanuatu, Timor, Peru) → quake 11–13 YES mark .29 vs fair ≈ .27 (P0, λ≈1.3 over 33 d) → hold. Queued news since 08:00Z non-material (Anthropic IPO commentary, Messi/Inter Miami eliminated by Crew — no bearing on held markets, OpenRouter blog; the "FOMC statement" item is the old 12 Nov release). No exit with bid near fair; HLE resting SELL 20@0.25 unchanged.
+- Watchlist monitor: GEOD $0.1878 (already reviewed at 08:00Z, re-check 1 Dec final Nov burns) and AAVE standing review — no change.
+- Hunt: Spotify Wrapped 2026 ranking markets vs kworb Wayback deltas → Drake #2 .80 consistent with a ~15–20% Drake haircut seen in 2024/2025 → **KILLED** (hunt_iteration.md).
+- Protocol: Jupiter (JUP) §3.9 → WATCH, trigger ≤$0.18 added to watchlist_triggers.json.
+- Trades: none. No real lead.
